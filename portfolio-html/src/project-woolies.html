@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Woolworths Merchandise Analysis | Chiranjeevi Veluri</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/project-woolies.css" />
+  </head>
+  <body>
+    <div class="page-transition page-transition--enter"></div>
+
+    <!-- Fixed nav bar -->
+    <div class="pw-topbar">
+      <a href="index.html" class="back-btn transition-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <div class="theme-switch">
+        <input type="checkbox" id="switch" />
+        <label class="toggle-icons" for="switch">
+          <img class="moon" src="assets/moon.svg" alt="Dark mode" />
+          <img class="sun" src="assets/sun.svg" alt="Light mode" />
+        </label>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="pw-hero pw-light">
+      <div class="pw-container">
+        <div class="pw-hero__eyebrow">Project Title</div>
+        <h1 class="pw-hero__title">Woolworths Merchandise<br><span class="pw-accent">Purchase Correlation</span></h1>
+        <p class="pw-hero__sub">Uncovering hidden product relationships across 8,902 grocery transactions to drive smarter shelf placement and bundling strategy.</p>
+        <div class="pw-hero__row">
+          <div class="pw-hero__tags">
+            <span class="tag">Microsoft Excel</span>
+            <span class="tag">Correlation Analysis</span>
+            <span class="tag">Retail Analytics</span>
+            <span class="tag">Pivot Tables</span>
+          </div>
+          <a href="https://1drv.ms/x/c/98083f540161e286/IQBtIwMUlbK-Q4O8q-QrEU2yAceO7gg0_eDlxKOZC6PpQ_o?e=umZQnA" class="btn btn-primary">View Workbook <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+      <!-- Screenshots -->
+    <section class="pw-section pw-light">
+      <div class="pw-container">
+        <span class="pw-label">Visual Analysis</span>
+        <h2 class="pw-heading">Excel Outputs</h2>
+        <div class="pw-screenshots">
+          <div class="pw-screenshot">
+            <img src="assets/screenshots/correlation-matrix.png" alt="Correlation Matrix and Scatter Plots" loading="lazy" />
+            <div class="pw-screenshot__cap">
+              <strong>Correlation Matrix & Scatter Plots</strong>
+              <p>Heatmap of all 10×10 product correlations with scatter plots illustrating strong, moderate, and weak relationships.</p>
+            </div>
+          </div>
+          <div class="pw-screenshot">
+            <img src="assets/screenshots/pivot-summary.png" alt="Product Purchase Summary" loading="lazy" />
+            <div class="pw-screenshot__cap">
+              <strong>Product Purchase Summary</strong>
+              <p>Pivot table showing total spend and quantity by category. Diapers ($23,625) leads in revenue — a high-volume necessity often bought separately.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About + Problem side by side -->
+    <section class="pw-section pw-light">
+      <div class="pw-container pw-two-col">
+        <div>
+          <span class="pw-label">About This Project</span>
+          <h2 class="pw-heading">What Was Built & Why</h2>
+          <p class="pw-body">Retail stores typically arrange products by category — dairy with dairy, snacks with snacks. But this ignores how customers actually shop. This project analysed purchase correlations across grocery categories including milk, bread, eggs, pasta, and diapers using an Excel correlation matrix to discover which products customers <em class="pw-em">actually</em> buy together.</p>
+          <p class="pw-body">The goal: move from assumption-based shelf placement to data-driven store layout decisions.</p>
+          <ul class="pw-tool-list">
+            <li><i class="fas fa-check-circle"></i> Pivot Tables & Pivot Charts</li>
+            <li><i class="fas fa-check-circle"></i> CORREL function — 10×10 matrix</li>
+            <li><i class="fas fa-check-circle"></i> Conditional Formatting Heatmap</li>
+            <li><i class="fas fa-check-circle"></i> Scatter Plot Visualisation</li>
+          </ul>
+        </div>
+        <div>
+          <span class="pw-label">Problem Statement</span>
+          <h2 class="pw-heading">The Business Challenge</h2>
+          <div class="pw-prob-cards">
+            <div class="pw-prob-card">
+              <i class="fas fa-store"></i>
+              <div>
+                <h3>Inefficient Store Layout</h3>
+                <p>Products placed by category rather than actual customer behaviour, leading to missed cross-selling opportunities.</p>
+              </div>
+            </div>
+            <div class="pw-prob-card">
+              <i class="fas fa-shopping-basket"></i>
+              <div>
+                <h3>Reduced Basket Value</h3>
+                <p>Without knowing which products are bought together, retailers cannot strategically increase average transaction value.</p>
+              </div>
+            </div>
+            <div class="pw-prob-card">
+              <i class="fas fa-tags"></i>
+              <div>
+                <h3>Untargeted Promotions</h3>
+                <p>Bundles created without data insight fail to leverage natural purchase relationships between products.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology + Key Findings combined -->
+    <section class="pw-section pw-dark">
+      <div class="pw-container">
+        <div class="pw-mf-grid">
+
+          <!-- Left: Methodology steps -->
+          <div>
+            <span class="pw-label">Methodology</span>
+            <h2 class="pw-heading pw-heading--white">How It Was Done</h2>
+            <div class="pw-steps">
+              <div class="pw-step">
+                <div class="pw-step__num">01</div>
+                <div>
+                  <h3>Data Preparation</h3>
+                  <p>Cleaned 8,902 transaction records. Aggregated purchase totals per customer using pivot tables to build the correlation input matrix.</p>
+                </div>
+              </div>
+              <div class="pw-step">
+                <div class="pw-step__num">02</div>
+                <div>
+                  <h3>Correlation Matrix</h3>
+                  <p>Applied Excel's CORREL function across all product pairs to build a 10×10 matrix. Values near +1 = strong co-purchase relationship.</p>
+                </div>
+              </div>
+              <div class="pw-step">
+                <div class="pw-step__num">03</div>
+                <div>
+                  <h3>Heatmap & Scatter Plots</h3>
+                  <p>Conditional formatting colour-coded the matrix. Scatter plots with trendlines validated strong, moderate, and weak pair relationships.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Top findings + mini heatmap -->
+          <div>
+            <span class="pw-label">Key Findings</span>
+            <h2 class="pw-heading pw-heading--white">Top Correlated Pairs</h2>
+            <div class="pw-pairs">
+              <div class="pw-pair">
+                <span class="pw-pair__rank">1</span>
+                <div class="pw-pair__info">
+                  <strong>Pasta & Pasta Sauce</strong>
+                  <span>Strongest co-purchase in dataset</span>
+                </div>
+                <div class="pw-pair__bar-wrap">
+                  <div class="pw-pair__bar" style="--w:95.5%"></div>
+                  <span class="pw-pair__score">0.955</span>
+                </div>
+              </div>
+              <div class="pw-pair">
+                <span class="pw-pair__rank">2</span>
+                <div class="pw-pair__info">
+                  <strong>Eggs & Milk</strong>
+                  <span>Classic breakfast staples</span>
+                </div>
+                <div class="pw-pair__bar-wrap">
+                  <div class="pw-pair__bar" style="--w:78.7%"></div>
+                  <span class="pw-pair__score">0.787</span>
+                </div>
+              </div>
+              <div class="pw-pair">
+                <span class="pw-pair__rank">3</span>
+                <div class="pw-pair__info">
+                  <strong>Wet Wipes & Chocolates</strong>
+                  <span>Unexpected — parents treating themselves</span>
+                </div>
+                <div class="pw-pair__bar-wrap">
+                  <div class="pw-pair__bar" style="--w:78.1%"></div>
+                  <span class="pw-pair__score">0.781</span>
+                </div>
+              </div>
+              <div class="pw-pair">
+                <span class="pw-pair__rank">4</span>
+                <div class="pw-pair__info">
+                  <strong>Milk & Bread</strong>
+                  <span>Essential grocery staples</span>
+                </div>
+                <div class="pw-pair__bar-wrap">
+                  <div class="pw-pair__bar" style="--w:75.7%"></div>
+                  <span class="pw-pair__score">0.757</span>
+                </div>
+              </div>
+              <div class="pw-pair">
+                <span class="pw-pair__rank">5</span>
+                <div class="pw-pair__info">
+                  <strong>Diapers & Wet Wipes</strong>
+                  <span>Logical baby care pairing</span>
+                </div>
+                <div class="pw-pair__bar-wrap">
+                  <div class="pw-pair__bar" style="--w:70%"></div>
+                  <span class="pw-pair__score">0.700</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Compact heatmap -->
+            <div class="pw-heatmap-wrap">
+              <p class="pw-heatmap-note">Full correlation matrix — green = strong positive, red = negative</p>
+              <div class="pw-heatmap-scroll">
+                <table class="pw-heatmap">
+                  <thead>
+                    <tr><th></th><th>Milk</th><th>Bread</th><th>Eggs</th><th>Pasta</th><th>P.Sauce</th><th>Nachos</th><th>Salsa</th><th>Diapers</th><th>W.Wipes</th><th>Choc</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td class="hl">Milk</td>      <td class="hs">1.00</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td></tr>
+                    <tr><td class="hl">Bread</td>     <td class="hm3">0.757</td><td class="hs">1.00</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td></tr>
+                    <tr><td class="hl">Eggs</td>      <td class="hm4">0.787</td><td class="hm2">0.606</td><td class="hs">1.00</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td></tr>
+                    <tr><td class="hl">Pasta</td>     <td class="hz">0.019</td><td class="hz">0.146</td><td class="hz">0.007</td><td class="hs">1.00</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td></tr>
+                    <tr><td class="hl">P.Sauce</td>   <td class="hr">-0.024</td><td class="hz">0.100</td><td class="hz">0.060</td><td class="hm5">0.955</td><td class="hs">1.00</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td></tr>
+                    <tr><td class="hl">Nachos</td>    <td class="hr">-0.067</td><td class="hr">-0.065</td><td class="hr">-0.178</td><td class="hz">0.183</td><td class="hz">0.104</td><td class="hs">1.00</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td></tr>
+                    <tr><td class="hl">Salsa</td>     <td class="hz">0.026</td><td class="hr">-0.159</td><td class="hz">0.040</td><td class="hz">0.208</td><td class="hz">0.134</td><td class="hm1">0.454</td><td class="hs">1.00</td><td class="hn">—</td><td class="hn">—</td><td class="hn">—</td></tr>
+                    <tr><td class="hl">Diapers</td>   <td class="hz">0.090</td><td class="hz">0.017</td><td class="hz">0.055</td><td class="hr">-0.156</td><td class="hr">-0.187</td><td class="hz">0.147</td><td class="hr">-0.089</td><td class="hs">1.00</td><td class="hn">—</td><td class="hn">—</td></tr>
+                    <tr><td class="hl">W.Wipes</td>   <td class="hr">-0.027</td><td class="hr">-0.071</td><td class="hr">-0.070</td><td class="hr">-0.154</td><td class="hr">-0.198</td><td class="hz">0.207</td><td class="hr">-0.133</td><td class="hm2">0.700</td><td class="hs">1.00</td><td class="hn">—</td></tr>
+                    <tr><td class="hl">Choc</td>      <td class="hr">-0.071</td><td class="hz">0.102</td><td class="hr">-0.123</td><td class="hr">-0.090</td><td class="hr">-0.137</td><td class="hz">0.174</td><td class="hr">-0.192</td><td class="hm2">0.577</td><td class="hm4">0.781</td><td class="hs">1.00</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Recommendations -->
+    <section class="pw-section pw-dark">
+      <div class="pw-container">
+        <span class="pw-label">Recommendations</span>
+        <h2 class="pw-heading pw-heading--white">Actionable Insights for Woolworths</h2>
+        <div class="pw-rec-grid">
+          <div class="pw-rec-card">
+            <div class="pw-rec-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Shelf Co-location</h3>
+            <p>Move Pasta and Pasta Sauce to adjacent shelving (r = 0.955). Position Eggs alongside Milk in the dairy aisle to capture the 0.787 correlation.</p>
+          </div>
+          <div class="pw-rec-card">
+            <div class="pw-rec-icon"><i class="fas fa-gift"></i></div>
+            <h3>Bundle Promotions</h3>
+            <p>Create "Pasta Night" (Pasta + Sauce) and "Breakfast Essentials" (Milk + Bread + Eggs) bundles to convert correlations into deliberate cross-sells.</p>
+          </div>
+          <div class="pw-rec-card">
+            <div class="pw-rec-icon"><i class="fas fa-baby"></i></div>
+            <h3>Baby Aisle Strategy</h3>
+            <p>Place Chocolates near Diapers and Wet Wipes — the 0.781 Wet Wipes/Chocolates correlation suggests parents treating themselves.</p>
+          </div>
+          <div class="pw-rec-card">
+            <div class="pw-rec-icon"><i class="fas fa-bullhorn"></i></div>
+            <h3>Targeted Promotions</h3>
+            <p>Customers adding Pasta to cart should receive a Pasta Sauce prompt before checkout. Use product pairs to drive personalised offers.</p>
+          </div>
+          <div class="pw-rec-card">
+            <div class="pw-rec-icon"><i class="fas fa-warehouse"></i></div>
+            <h3>Warehouse Optimisation</h3>
+            <p>Group strongly correlated products together in picking routes to reduce travel time and improve online order fulfilment efficiency.</p>
+          </div>
+          <div class="pw-rec-card">
+            <div class="pw-rec-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Expand the Dataset</h3>
+            <p>Apply this methodology across more categories and longer time periods to uncover seasonal correlations and refine store layouts further.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <a href="mailto:velurichiranjeevi2001@gmail.com">velurichiranjeevi2001@gmail.com</a>
+        <div class="social">
+          <a href="#" target="_blank"><img src="./assets/linkedin-icon.svg" alt="LinkedIn" /></a>
+          <a href="#" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
+        </div>
+        <p>Copyright &copy; Chiranjeevi Veluri <span id="datee"></span>, All rights reserved</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/project-woolies.js"></script>
+  </body>
+</html>
