@@ -83,33 +83,21 @@
 .pb-screenshot-placeholder:hover { border-color: var(--primary-color); }
 
 .pb-placeholder-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 5rem 2rem;
+  display: block;
+  padding: 0;
   background: var(--card-background);
   text-align: center;
 }
 
 .pb-placeholder-inner i {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  opacity: 0.4;
+  display: none;
 }
 
-.pb-placeholder-inner p {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--text-color);
-  opacity: 0.6;
-}
-
-.pb-placeholder-inner span {
-  font-size: 0.78rem;
-  color: var(--text-color);
-  opacity: 0.4;
+.pb-placeholder-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 /* Insight cards (replaces correlation pairs) */
