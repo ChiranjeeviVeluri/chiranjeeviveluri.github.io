@@ -186,11 +186,11 @@ body {
 
 .skill-row {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  align-items: center;
+  grid-template-columns: 320px 1fr;
+  align-items: flex-start;
   padding: 2rem 0;
   border-top: 1px solid var(--card-background);
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .skill-row:last-child {
@@ -203,14 +203,14 @@ body {
   text-transform: uppercase;
   color: var(--text-color);
   opacity: 0.9;
-  line-height: 1;
-  white-space: nowrap;
+  line-height: 1.1;
+  padding-top: 0.6rem;
 }
 
 .skill-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: center;
 }
 
