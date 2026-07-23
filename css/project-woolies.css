@@ -31,7 +31,7 @@
 
 .back-btn:hover {
   background: var(--primary-color);
-  color: #000;
+  color: #fff;
   border-color: var(--primary-color);
 }
 
@@ -360,7 +360,7 @@
 
 .pw-screenshot:hover {
   border-color: var(--primary-color);
-  box-shadow: 0 6px 24px rgba(255, 205, 66, 0.1);
+  box-shadow: 0 6px 24px rgba(31, 100, 201, 0.1);
 }
 
 .pw-screenshot img { width: 100%; display: block; }
@@ -408,7 +408,7 @@
 
 .pw-rec-icon {
   width: 36px; height: 36px;
-  background: rgba(255,205,66,0.12);
+  background: rgba(31,100,201,0.12);
   border-radius: 7px;
   display: flex;
   align-items: center;

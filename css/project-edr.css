@@ -8,16 +8,16 @@
 .pw-accent          { color: var(--primary-color); }
 .pw-label           { color: var(--primary-color); }
 .pw-em              { color: var(--primary-color); }
-.back-btn:hover     { background: var(--primary-color); border-color: var(--primary-color); color: #000; }
+.back-btn:hover     { background: var(--primary-color); border-color: var(--primary-color); color: #fff; }
 .tag                { border-color: var(--primary-color); }
 .pw-tool-list li i  { color: var(--primary-color); }
 .pw-prob-card > i   { color: var(--primary-color); }
 .pw-prob-card:hover { border-color: var(--primary-color); }
 .pw-step__num       { color: var(--primary-color); }
-.pw-rec-icon        { background: rgba(255,205,66,0.12); }
+.pw-rec-icon        { background: rgba(31,100,201,0.12); }
 .pw-rec-icon i      { color: var(--primary-color); }
 .pw-rec-card:hover  { border-color: var(--primary-color); }
-.pw-screenshot:hover { border-color: var(--primary-color); box-shadow: 0 6px 24px rgba(255,205,66,0.12); }
+.pw-screenshot:hover { border-color: var(--primary-color); box-shadow: 0 6px 24px rgba(31,100,201,0.12); }
 
 /* pw-heading white variant */
 .pw-heading--white { color: var(--text-color); }
@@ -47,7 +47,7 @@
 .pe-kpi-icon {
   width: 42px;
   height: 42px;
-  background: rgba(255,205,66,0.12);
+  background: rgba(31,100,201,0.12);
   border-radius: 10px;
   display: flex;
   align-items: center;

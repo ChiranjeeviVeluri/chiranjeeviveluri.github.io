@@ -17,10 +17,10 @@
 .pw-prob-card > i   { color: var(--primary-color); }
 .pw-prob-card:hover { border-color: var(--primary-color); }
 .pw-step__num       { color: var(--primary-color); }
-.pw-rec-icon        { background: rgba(255,205,66,0.12); }
+.pw-rec-icon        { background: rgba(31,100,201,0.12); }
 .pw-rec-icon i      { color: var(--primary-color); }
 .pw-rec-card:hover  { border-color: var(--primary-color); }
-.pw-screenshot:hover { border-color: var(--primary-color); box-shadow: 0 6px 24px rgba(255,205,66,0.12); }
+.pw-screenshot:hover { border-color: var(--primary-color); box-shadow: 0 6px 24px rgba(31,100,201,0.12); }
 
 /* KPI cards */
 .pb-kpi-grid {
@@ -47,7 +47,7 @@
 .pb-kpi-icon {
   width: 42px;
   height: 42px;
-  background: rgba(255,205,66,0.12);
+  background: rgba(31,100,201,0.12);
   border-radius: 10px;
   display: flex;
   align-items: center;
