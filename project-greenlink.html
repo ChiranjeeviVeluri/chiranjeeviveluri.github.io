@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propagation Stock & Capacity Planner | Chiranjeevi Veluri</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/project-greenlink.css" />
+  </head>
+  <body>
+    <div class="page-transition page-transition--enter"></div>
+
+    <!-- Fixed nav bar -->
+    <div class="pg-topbar">
+      <a href="index.html" class="back-btn transition-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <div class="theme-switch">
+        <input type="checkbox" id="switch" />
+        <label class="toggle-icons" for="switch">
+          <img class="moon" src="assets/moon.svg" alt="Dark mode" />
+          <img class="sun" src="assets/sun.svg" alt="Light mode" />
+        </label>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="pg-hero pg-light">
+      <div class="pg-container">
+        <div class="pg-hero__eyebrow">Project Title</div>
+        <h1 class="pg-hero__title">Propagation Stock &<br><span class="pg-accent">Capacity Planner</span></h1>
+        <p class="pg-hero__sub">A planning dashboard built for Greenlink Sandbelt Indigenous Nursery, forecasting propagation demand against bench capacity from a single public stock list — turning a static CSV into an interactive what-if planning tool.</p>
+        <div class="pg-hero__row">
+          <div class="pg-hero__tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">Power Query</span>
+            <span class="tag">DAX</span>
+            <span class="tag">What-If Analysis</span>
+            <span class="tag">Excel</span>
+          </div>
+          <a href="#" class="btn btn-primary">View Dashboard <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="pg-section pg-light">
+      <div class="pg-container">
+        <span class="pg-label">Visual Analysis</span>
+        <h2 class="pg-heading">Dashboard Outputs</h2>
+        <div class="pg-screenshots">
+          <div class="pg-screenshot pg-screenshot--placeholder">
+            <div class="pg-screenshot__frame"><i class="fas fa-image"></i></div>
+            <div class="pg-screenshot__cap">
+              <strong>KPI & What-If Scenario View</strong>
+              <p>KPI cards for species out of stock, council match count and forecast units, with adjustable strike rate, lead time and bench space sliders.</p>
+            </div>
+          </div>
+          <div class="pg-screenshot pg-screenshot--placeholder">
+            <div class="pg-screenshot__frame"><i class="fas fa-image"></i></div>
+            <div class="pg-screenshot__cap">
+              <strong>Seasonal Stock Chart</strong>
+              <p>Clustered column chart showing stock available by flowering season, mapped from the season reference table.</p>
+            </div>
+          </div>
+          <div class="pg-screenshot pg-screenshot--placeholder">
+            <div class="pg-screenshot__frame"><i class="fas fa-image"></i></div>
+            <div class="pg-screenshot__cap">
+              <strong>Priority Species to Propagate</strong>
+              <p>Filtered table combining council-recommended species with zero-stock flags to surface top propagation priorities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About + Problem side by side -->
+    <section class="pg-section pg-dark">
+      <div class="pg-container pg-two-col">
+        <div>
+          <span class="pg-label">About This Project</span>
+          <h2 class="pg-heading">What Was Built & Why</h2>
+          <p class="pg-body">Greenlink Sandbelt Indigenous Nursery is a volunteer-run community nursery publishing a public plant stock list, but with no structured way to compare what they can propagate against seasonal demand. This project turns that single public CSV into a working planning tool — cleaning and modelling the data in Excel, then layering forecasting and what-if scenarios on top in Power BI.</p>
+          <p class="pg-body">Species-level stock was combined with a seasonal flowering reference table and a manually cross-referenced council planting demand list, so volunteers can see not just what's in stock, but what's seasonally relevant and locally recommended to grow.</p>
+          <ul class="pg-tool-list">
+            <li><i class="fas fa-check-circle"></i> Power Query Cleaning & Transformation</li>
+            <li><i class="fas fa-check-circle"></i> XLOOKUP Season Mapping</li>
+            <li><i class="fas fa-check-circle"></i> Power BI What-If Parameters</li>
+            <li><i class="fas fa-check-circle"></i> DAX Forecasting Measures</li>
+          </ul>
+        </div>
+        <div>
+          <span class="pg-label">Problem Statement</span>
+          <h2 class="pg-heading">The Planning Challenge</h2>
+          <div class="pg-prob-cards">
+            <div class="pg-prob-card">
+              <i class="fas fa-seedling"></i>
+              <div>
+                <h3>No Capacity Visibility</h3>
+                <p>Volunteers had no way to see propagation demand against real bench space, strike rate, or potting-on lead time before committing seed and cuttings.</p>
+              </div>
+            </div>
+            <div class="pg-prob-card">
+              <i class="fas fa-calendar-alt"></i>
+              <div>
+                <h3>Unstructured Seasonal Data</h3>
+                <p>Flowering times sat as free text in the published stock list, making it impossible to plan propagation activity by season at a glance.</p>
+              </div>
+            </div>
+            <div class="pg-prob-card">
+              <i class="fas fa-map-signs"></i>
+              <div>
+                <h3>Disconnected Council Demand</h3>
+                <p>Local council revegetation planting lists existed separately from the nursery's own stock, with no easy way to flag which species mattered most.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Methodology -->
+    <section class="pg-section pg-light">
+      <div class="pg-container">
+        <span class="pg-label">Methodology</span>
+        <h2 class="pg-heading">How It Was Built</h2>
+        <div class="pg-steps">
+          <div class="pg-step">
+            <div class="pg-step__num">01</div>
+            <div>
+              <h3>Load & Clean the Dataset</h3>
+              <p>Used Power Query to strip non-data rows from the raw stock list, promote real headers, extract category labels via a conditional column and fill-down, then standardise flowering time and price code into clean split columns.</p>
+            </div>
+          </div>
+          <div class="pg-step">
+            <div class="pg-step__num">02</div>
+            <div>
+              <h3>Season & Council Reference Tables</h3>
+              <p>Built a season lookup table and linked it to each species' flowering start via XLOOKUP. Manually cross-referenced a sample of council revegetation lists to flag council-recommended species.</p>
+            </div>
+          </div>
+          <div class="pg-step">
+            <div class="pg-step__num">03</div>
+            <div>
+              <h3>Power BI Data Model</h3>
+              <p>Imported the cleaned Excel tables into Power BI and verified relationships between species, season and council demand data so they could be used together across the dashboard.</p>
+            </div>
+          </div>
+          <div class="pg-step">
+            <div class="pg-step__num">04</div>
+            <div>
+              <h3>What-If Parameters & DAX</h3>
+              <p>Created adjustable parameters for strike rate, potting-on lead time and bench space, then wrote DAX measures to forecast available units, required bench space and the resulting capacity gap.</p>
+            </div>
+          </div>
+          <div class="pg-step">
+            <div class="pg-step__num">05</div>
+            <div>
+              <h3>KPI Cards & Visuals</h3>
+              <p>Built KPI cards, a seasonal stock chart, a category breakdown chart and a conditionally-formatted capacity gap card that updates live as the what-if sliders move.</p>
+            </div>
+          </div>
+          <div class="pg-step">
+            <div class="pg-step__num">06</div>
+            <div>
+              <h3>Documentation & Handoff</h3>
+              <p>Wrote an assumptions register documenting the value, source, date and confidence level behind every planning input, plus a one-page refresh guide so a volunteer coordinator could update it unassisted.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <a href="mailto:velurichiranjeevi2001@gmail.com">velurichiranjeevi2001@gmail.com</a>
+        <div class="social">
+          <a href="#" target="_blank"><img src="./assets/linkedin-icon.svg" alt="LinkedIn" /></a>
+          <a href="#" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
+        </div>
+        <p>Copyright &copy; Chiranjeevi Veluri <span id="datee"></span>, All rights reserved</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/project-greenlink.js"></script>
+  </body>
+</html>
