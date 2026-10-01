@@ -3,18 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Propagation Stock & Capacity Planner | Chiranjeevi Veluri</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+    <title>NSW Property Market Intelligence | Chiranjeevi Veluri</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utilities.css" />
-    <link rel="stylesheet" href="css/project-greenlink.css" />
+    <link rel="stylesheet" href="css/project-woolies.css" />
+    <link rel="stylesheet" href="css/project-nsw.css" />
   </head>
   <body>
     <div class="page-transition page-transition--enter"></div>
 
-    <!-- Fixed nav bar -->
-    <div class="pg-topbar">
+    <!-- Top bar -->
+    <div class="pw-topbar">
       <a href="index.html" class="back-btn transition-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
       <div class="theme-switch">
         <input type="checkbox" id="switch" />
@@ -26,93 +27,120 @@
     </div>
 
     <!-- Hero -->
-    <section class="pg-hero pg-light">
-      <div class="pg-container">
-        <div class="pg-hero__eyebrow">Project Title</div>
-        <h1 class="pg-hero__title">Propagation Stock &<br><span class="pg-accent">Capacity Planner</span></h1>
-        <p class="pg-hero__sub">A planning dashboard built for Greenlink Sandbelt Indigenous Nursery, forecasting propagation demand against bench capacity from a single public stock list — turning a static CSV into an interactive what-if planning tool.</p>
-        <div class="pg-hero__row">
-          <div class="pg-hero__tags">
+    <section class="pw-hero pw-light">
+      <div class="pw-container">
+        <div class="pw-hero__eyebrow">Project Title</div>
+        <h1 class="pw-hero__title">NSW Residential Property<br><span class="pw-accent">Market Intelligence</span></h1>
+        <p class="pw-hero__sub">Cleaning, enriching, and modelling 2.2 million real NSW government property sale records into a verified data warehouse and interactive dashboard revealing how location, socio-economic profile, and property type drive housing prices across the state.</p>
+        <div class="pw-hero__row">
+          <div class="pw-hero__tags">
+            <span class="tag">Python (Pandas)</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">SQL Window Functions</span>
             <span class="tag">Power BI</span>
-            <span class="tag">Power Query</span>
             <span class="tag">DAX</span>
-            <span class="tag">What-If Analysis</span>
-            <span class="tag">Excel</span>
+            <span class="tag">Data Warehousing</span>
+            <span class="tag">Star Schema Design</span>
+            <span class="tag">ABS SEIFA Enrichment</span>
           </div>
           <a href="#" class="btn btn-primary">View Dashboard <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </section>
 
+    <!-- KPI Summary -->
+    <section class="pw-section pw-light">
+      <div class="pw-container">
+        <span class="pw-label">At a Glance</span>
+        <h2 class="pw-heading">Warehouse & Model Scale</h2>
+        <div class="pn-kpi-grid">
+          <div class="pn-kpi-card">
+            <div class="pn-kpi-icon"><i class="fas fa-database"></i></div>
+            <div class="pn-kpi-value">2.2M+</div>
+            <div class="pn-kpi-label">Raw Government Sale Records Loaded</div>
+          </div>
+          <div class="pn-kpi-card">
+            <div class="pn-kpi-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="pn-kpi-value">608</div>
+            <div class="pn-kpi-label">NSW Postcodes Modelled</div>
+          </div>
+          <div class="pn-kpi-card">
+            <div class="pn-kpi-icon"><i class="fas fa-server"></i></div>
+            <div class="pn-kpi-value">1.2M+</div>
+            <div class="pn-kpi-label">Verified Sales in the Warehouse</div>
+          </div>
+          <div class="pn-kpi-card">
+            <div class="pn-kpi-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="pn-kpi-value">4</div>
+            <div class="pn-kpi-label">ABS SEIFA Indexes Integrated</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Screenshots -->
-    <section class="pg-section pg-light">
-      <div class="pg-container">
-        <span class="pg-label">Visual Analysis</span>
-        <h2 class="pg-heading">Dashboard Outputs</h2>
-        <div class="pg-screenshots">
-          <div class="pg-screenshot pg-screenshot--placeholder">
-            <div class="pg-screenshot__frame"><i class="fas fa-image"></i></div>
-            <div class="pg-screenshot__cap">
-              <strong>KPI & What-If Scenario View</strong>
-              <p>KPI cards for species out of stock, council match count and forecast units, with adjustable strike rate, lead time and bench space sliders.</p>
+    <section class="pw-section pw-light">
+      <div class="pw-container">
+        <span class="pw-label">Visual Analysis</span>
+        <h2 class="pw-heading">Dashboard Outputs</h2>
+        <div class="pn-screenshots">
+          <div class="pn-screenshot">
+            <div class="pn-screenshot__frame"><i class="fas fa-image"></i></div>
+            <div class="pn-screenshot__cap">
+              <strong>Market Overview & Insights</strong>
+              <p>State-wide KPIs, the 2021 price boom across houses vs units, market composition, a postcode-level sales map, the socio-economic price relationship, and a live fastest-growing-suburbs leaderboard.</p>
             </div>
           </div>
-          <div class="pg-screenshot pg-screenshot--placeholder">
-            <div class="pg-screenshot__frame"><i class="fas fa-image"></i></div>
-            <div class="pg-screenshot__cap">
-              <strong>Seasonal Stock Chart</strong>
-              <p>Clustered column chart showing stock available by flowering season, mapped from the season reference table.</p>
-            </div>
-          </div>
-          <div class="pg-screenshot pg-screenshot--placeholder">
-            <div class="pg-screenshot__frame"><i class="fas fa-image"></i></div>
-            <div class="pg-screenshot__cap">
-              <strong>Priority Species to Propagate</strong>
-              <p>Filtered table combining council-recommended species with zero-stock flags to surface top propagation priorities.</p>
+          <div class="pn-screenshot">
+            <div class="pn-screenshot__frame"><i class="fas fa-image"></i></div>
+            <div class="pn-screenshot__cap">
+              <strong>Suburb Explorer</strong>
+              <p>An interactive drill-down across 608 NSW postcodes' worth of suburbs, with a live Suburb vs. State comparison table against the state median.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About + Problem side by side -->
-    <section class="pg-section pg-dark">
-      <div class="pg-container pg-two-col">
+    <!-- About + Problem -->
+    <section class="pw-section pw-light">
+      <div class="pw-container pw-two-col">
         <div>
-          <span class="pg-label">About This Project</span>
-          <h2 class="pg-heading">What Was Built & Why</h2>
-          <p class="pg-body">Greenlink Sandbelt Indigenous Nursery is a volunteer-run community nursery publishing a public plant stock list, but with no structured way to compare what they can propagate against seasonal demand. This project turns that single public CSV into a working planning tool — cleaning and modelling the data in Excel, then layering forecasting and what-if scenarios on top in Power BI.</p>
-          <p class="pg-body">Species-level stock was combined with a seasonal flowering reference table and a manually cross-referenced council planting demand list, so volunteers can see not just what's in stock, but what's seasonally relevant and locally recommended to grow.</p>
-          <ul class="pg-tool-list">
-            <li><i class="fas fa-check-circle"></i> Power Query Cleaning & Transformation</li>
-            <li><i class="fas fa-check-circle"></i> XLOOKUP Season Mapping</li>
-            <li><i class="fas fa-check-circle"></i> Power BI What-If Parameters</li>
-            <li><i class="fas fa-check-circle"></i> DAX Forecasting Measures</li>
+          <span class="pw-label">About This Project</span>
+          <h2 class="pw-heading">What Was Built & Why</h2>
+          <p class="pw-body">Most public commentary on the NSW property market treats it as one undifferentiated number. This project builds the infrastructure to ask sharper questions of genuine NSW Government Valuer General sale-record data — not a sample — covering every residential transaction from 2018 to the current year.</p>
+          <p class="pw-body">The raw, messy government feed is taken through a full real-world pipeline: cleaning and validating <em class="pw-em">2.2 million rows</em> in Python, enriching it with official ABS socio-economic indexes, designing a relational data warehouse in MySQL, writing analytical SQL with genuine window functions, and building a two-page interactive Power BI dashboard on top.</p>
+          <ul class="pw-tool-list">
+            <li><i class="fas fa-check-circle"></i> Python/Pandas Cleaning at Scale</li>
+            <li><i class="fas fa-check-circle"></i> ABS Census-Derived Index Enrichment</li>
+            <li><i class="fas fa-check-circle"></i> Relational Database Design (Star Schema)</li>
+            <li><i class="fas fa-check-circle"></i> Advanced SQL — CTEs, LAG, NTILE</li>
+            <li><i class="fas fa-check-circle"></i> Power BI Data Modelling & DAX</li>
           </ul>
         </div>
         <div>
-          <span class="pg-label">Problem Statement</span>
-          <h2 class="pg-heading">The Planning Challenge</h2>
-          <div class="pg-prob-cards">
-            <div class="pg-prob-card">
-              <i class="fas fa-seedling"></i>
+          <span class="pw-label">Problem Statement</span>
+          <h2 class="pw-heading">The Business Challenge</h2>
+          <div class="pw-prob-cards">
+            <div class="pw-prob-card">
+              <i class="fas fa-database"></i>
               <div>
-                <h3>No Capacity Visibility</h3>
-                <p>Volunteers had no way to see propagation demand against real bench space, strike rate, or potting-on lead time before committing seed and cuttings.</p>
+                <h3>Fragmented, Unverified Data</h3>
+                <p>Government property data arrives as a raw weekly-snapshot feed with no deduplication, mixed units, and no quality flags — unusable without cleaning and validation first.</p>
               </div>
             </div>
-            <div class="pg-prob-card">
-              <i class="fas fa-calendar-alt"></i>
+            <div class="pw-prob-card">
+              <i class="fas fa-balance-scale"></i>
               <div>
-                <h3>Unstructured Seasonal Data</h3>
-                <p>Flowering times sat as free text in the published stock list, making it impossible to plan propagation activity by season at a glance.</p>
+                <h3>Price Without Context</h3>
+                <p>A sale price alone says nothing about genuine market value versus an area's socio-economic profile — without linking to demographic indexes, the two are easy to conflate.</p>
               </div>
             </div>
-            <div class="pg-prob-card">
-              <i class="fas fa-map-signs"></i>
+            <div class="pw-prob-card">
+              <i class="fas fa-search-location"></i>
               <div>
-                <h3>Disconnected Council Demand</h3>
-                <p>Local council revegetation planting lists existed separately from the nursery's own stock, with no easy way to flag which species mattered most.</p>
+                <h3>No Fast Way to Benchmark</h3>
+                <p>Comparing one suburb against the state across 1.2 million+ sales isn't something a static spreadsheet can do — it needs a tool that recalculates as the question changes.</p>
               </div>
             </div>
           </div>
@@ -120,55 +148,131 @@
       </div>
     </section>
 
+    <!-- Methodology + Key Findings -->
+    <section class="pw-section pw-dark">
+      <div class="pw-container">
+        <div class="pw-mf-grid">
 
+          <!-- Methodology -->
+          <div>
+            <span class="pw-label">Methodology</span>
+            <h2 class="pw-heading pw-heading--white">How It Was Done</h2>
+            <div class="pw-steps">
+              <div class="pw-step">
+                <div class="pw-step__num">01</div>
+                <div>
+                  <h3>Data Sourcing & Cleaning</h3>
+                  <p>Loaded 2,206,232 raw records and resolved seven real data-quality issues, including 560,545 duplicate rows, mixed price scales, mixed land-area units, and inconsistent property-type labels.</p>
+                </div>
+              </div>
+              <div class="pw-step">
+                <div class="pw-step__num">02</div>
+                <div>
+                  <h3>Socio-Economic Enrichment</h3>
+                  <p>Joined all four ABS SEIFA 2021 indexes, including IRSAD, onto the cleaned sales data by postcode — achieving a 100% match rate across every NSW postcode.</p>
+                </div>
+              </div>
+              <div class="pw-step">
+                <div class="pw-step__num">03</div>
+                <div>
+                  <h3>Relational Warehouse Design</h3>
+                  <p>Normalised the data into a MySQL star schema: a fact_property_sales table referencing a dim_postcode_seifa dimension table, avoiding repeated socio-economic figures per postcode.</p>
+                </div>
+              </div>
+              <div class="pw-step">
+                <div class="pw-step__num">04</div>
+                <div>
+                  <h3>Analytical SQL</h3>
+                  <p>Wrote queries using LAG for year-over-year growth and NTILE for price-quartile ranking, including suburb-relative outlier detection comparing each sale to its own suburb's typical price.</p>
+                </div>
+              </div>
+              <div class="pw-step">
+                <div class="pw-step__num">05</div>
+                <div>
+                  <h3>Interactive Power BI Dashboard</h3>
+                  <p>Connected Power BI directly to the MySQL warehouse and built a full DAX measure library across a two-page, 16:9 state-wide overview and suburb-level drill-down.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <!-- Methodology -->
-    <section class="pg-section pg-light">
-      <div class="pg-container">
-        <span class="pg-label">Methodology</span>
-        <h2 class="pg-heading">How It Was Built</h2>
-        <div class="pg-steps">
-          <div class="pg-step">
-            <div class="pg-step__num">01</div>
-            <div>
-              <h3>Load & Clean the Dataset</h3>
-              <p>Used Power Query to strip non-data rows from the raw stock list, promote real headers, extract category labels via a conditional column and fill-down, then standardise flowering time and price code into clean split columns.</p>
+          <!-- Key Findings -->
+          <div>
+            <span class="pw-label">Key Findings</span>
+            <h2 class="pw-heading pw-heading--white">What the Data Revealed</h2>
+            <div class="pn-insights">
+              <div class="pn-insight-card">
+                <div class="pn-insight-stat">+26% vs +13%</div>
+                <div class="pn-insight-body">
+                  <strong>Houses Outpaced Units in the 2021 Boom</strong>
+                  <p>In the single biggest boom year, house prices grew at roughly double the rate of units — consistent with the COVID-era shift toward space over apartment living.</p>
+                </div>
+              </div>
+              <div class="pn-insight-card">
+                <div class="pn-insight-stat">2.3×</div>
+                <div class="pn-insight-body">
+                  <strong>Price Tracks Socio-Economic Advantage</strong>
+                  <p>Median price climbs near-monotonically from $555K in the most disadvantaged SEIFA decile to $1.3M in the most advantaged, confirmed independently in SQL.</p>
+                </div>
+              </div>
+              <div class="pn-insight-card">
+                <div class="pn-insight-stat">Regional</div>
+                <div class="pn-insight-body">
+                  <strong>Regional NSW Outperforming the Capital</strong>
+                  <p>The fastest-growing suburbs cluster around Albury-Wagga, Newcastle/Lake Macquarie, the Snowy Mountains and Hunter Valley — not Sydney addresses.</p>
+                </div>
+              </div>
+              <div class="pn-insight-card">
+                <div class="pn-insight-stat">560,545</div>
+                <div class="pn-insight-body">
+                  <strong>A Quarter of the Raw Feed Was Duplicate Noise</strong>
+                  <p>Removed from overlapping weekly government extracts — left unaddressed, this would have inflated every volume metric by roughly 25%.</p>
+                </div>
+              </div>
+              <div class="pn-insight-card">
+                <div class="pn-insight-stat">0.96%</div>
+                <div class="pn-insight-body">
+                  <strong>Suburb-Relative Detection Catches What Flat Thresholds Miss</strong>
+                  <p>11,854 sales flagged as likely non-market transactions by comparing each sale to its own suburb's typical price, not one statewide number.</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="pg-step">
-            <div class="pg-step__num">02</div>
-            <div>
-              <h3>Season & Council Reference Tables</h3>
-              <p>Built a season lookup table and linked it to each species' flowering start via XLOOKUP. Manually cross-referenced a sample of council revegetation lists to flag council-recommended species.</p>
-            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="pw-section pw-dark">
+      <div class="pw-container">
+        <span class="pw-label">Recommendations</span>
+        <h2 class="pw-heading pw-heading--white">Actionable Insights</h2>
+        <div class="pw-rec-grid">
+          <div class="pw-rec-card">
+            <div class="pw-rec-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Benchmark Against Local Context</h3>
+            <p>Compare each transaction to its own suburb's typical price rather than one fixed dollar threshold — $150,000 reads very differently in a regional town versus Parramatta.</p>
           </div>
-          <div class="pg-step">
-            <div class="pg-step__num">03</div>
-            <div>
-              <h3>Power BI Data Model</h3>
-              <p>Imported the cleaned Excel tables into Power BI and verified relationships between species, season and council demand data so they could be used together across the dashboard.</p>
-            </div>
+          <div class="pw-rec-card">
+            <div class="pw-rec-icon"><i class="fas fa-balance-scale"></i></div>
+            <h3>Weight Models by Socio-Economic Profile</h3>
+            <p>Given the near-2.3× price gap across SEIFA deciles, any valuation approach should incorporate a postcode's socio-economic context alongside property features.</p>
           </div>
-          <div class="pg-step">
-            <div class="pg-step__num">04</div>
-            <div>
-              <h3>What-If Parameters & DAX</h3>
-              <p>Created adjustable parameters for strike rate, potting-on lead time and bench space, then wrote DAX measures to forecast available units, required bench space and the resulting capacity gap.</p>
-            </div>
+          <div class="pw-rec-card">
+            <div class="pw-rec-icon"><i class="fas fa-mountain"></i></div>
+            <h3>Scout Regional Growth Corridors</h3>
+            <p>Albury-Wagga, Newcastle/Lake Macquarie, the Snowy Mountains and Hunter Valley are already outperforming the capital — a concrete shortlist for further research.</p>
           </div>
-          <div class="pg-step">
-            <div class="pg-step__num">05</div>
-            <div>
-              <h3>KPI Cards & Visuals</h3>
-              <p>Built KPI cards, a seasonal stock chart, a category breakdown chart and a conditionally-formatted capacity gap card that updates live as the what-if sliders move.</p>
-            </div>
+          <div class="pw-rec-card">
+            <div class="pw-rec-icon"><i class="fas fa-clone"></i></div>
+            <h3>Always Deduplicate Government Feeds</h3>
+            <p>Any pipeline ingesting a continuously-refreshed government source should build deduplication in as a standard early step — it corrected roughly a quarter of this dataset.</p>
           </div>
-          <div class="pg-step">
-            <div class="pg-step__num">06</div>
-            <div>
-              <h3>Documentation & Handoff</h3>
-              <p>Wrote an assumptions register documenting the value, source, date and confidence level behind every planning input, plus a one-page refresh guide so a volunteer coordinator could update it unassisted.</p>
-            </div>
+          <div class="pw-rec-card">
+            <div class="pw-rec-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Extend to Price Prediction</h3>
+            <p>The cleaned, enriched, warehoused dataset is already shaped for a time-based train/test split and a regression or gradient-boosted model as a natural next iteration.</p>
           </div>
         </div>
       </div>
@@ -178,14 +282,14 @@
       <div class="container">
         <a href="mailto:velurichiranjeevi2001@gmail.com">velurichiranjeevi2001@gmail.com</a>
         <div class="social">
-          <a href="#" target="_blank"><img src="./assets/linkedin-icon.svg" alt="LinkedIn" /></a>
-          <a href="#" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
+          <a href="https://www.linkedin.com/in/veluri-chiranjeevi-5b1b20225" target="_blank"><img src="./assets/linkedin-icon.svg" alt="LinkedIn" /></a>
+          <a href="https://github.com/ChiranjeeviVeluri" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
         </div>
         <p>Copyright &copy; Chiranjeevi Veluri <span id="datee"></span>, All rights reserved</p>
       </div>
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="js/project-greenlink.js"></script>
+    <script src="js/project-nsw.js"></script>
   </body>
 </html>

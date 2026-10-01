@@ -1,5 +1,4 @@
-// Scroll reveal
-const reveals = document.querySelectorAll(".pg-reveal");
+const reveals = document.querySelectorAll(".pw-reveal");
 
 if (reveals.length) {
   const revealObserver = new IntersectionObserver((entries) => {
@@ -14,7 +13,6 @@ if (reveals.length) {
   reveals.forEach((el) => revealObserver.observe(el));
 }
 
-// Page transition — back button
 const overlay = document.querySelector(".page-transition");
 
 document.querySelectorAll(".transition-link").forEach((el) => {
