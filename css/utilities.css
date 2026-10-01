@@ -164,12 +164,48 @@
   opacity: 1;
 }
 
-.card:nth-child(1) { background: url(../assets/project/woolies.png) center center/cover; }
-.card:nth-child(2) { background: url(../assets/project/bigw.png) center center/cover; }
-.card:nth-child(3) { background: url(../assets/project/project3.webp) center center/cover; }
-.card:nth-child(4) { background: url(../assets/project/nsw-property.png) center center/cover; } 
-.card:nth-child(5) { background: url(../assets/project/project-five.png) center center/cover; }
-.card:nth-child(6) { background: url(../assets/project/project-six.png) center center/cover; }
+.card:nth-child(1) {
+  background-image: url(../assets/project/nswthumbnail.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--card-background);
+}
+.card:nth-child(2) {
+  background-image: url(../assets/project/woliesthumbnail.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--card-background);
+}
+.card:nth-child(3) {
+  background-image: url(../assets/project/BgWThumbnail.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--card-background);
+}
+.card:nth-child(4) {
+  background-image: url(../assets/project/everydayrewardsthumbnail.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--card-background);
+}
+.card:nth-child(5) {
+  background-image: url(../assets/project/project-five.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--card-background);
+}
+.card:nth-child(6) {
+  background-image: url(../assets/project/project-six.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--card-background);
+}
 
 /* Responsive */
 @media (max-width: 768px) {

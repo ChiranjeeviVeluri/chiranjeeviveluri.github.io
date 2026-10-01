@@ -84,15 +84,12 @@
 
 .pn-screenshot:hover { border-color: var(--primary-color); }
 
-.pn-screenshot__frame {
-  aspect-ratio: 16 / 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-tint);
-  color: var(--primary-color);
-  font-size: 2rem;
+.pn-screenshot img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
+
 
 .pn-screenshot__cap {
   padding: 1rem 1.25rem;
