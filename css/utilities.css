@@ -165,42 +165,42 @@
 }
 
 .card:nth-child(1) {
-  background-image: url(../assets/project/nswthumbnail.png);
+  background-image: url(../assets/project/NSWResidentialPropertyMarket.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: var(--card-background);
 }
 .card:nth-child(2) {
-  background-image: url(../assets/project/woliesthumbnail.png);
+  background-image: url(../assets/project/WoolworthsCustomerAnalyticsDashboard.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: var(--card-background);
 }
 .card:nth-child(3) {
-  background-image: url(../assets/project/BgWThumbnail.png);
+  background-image: url(../assets/project/BIGWSalesPerformanceDashboard.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: var(--card-background);
 }
 .card:nth-child(4) {
-  background-image: url(../assets/project/everydayrewardsthumbnail.png);
+  background-image: url(../assets/project/EverydayRewardsLoyaltYDashboard.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: var(--card-background);
 }
 .card:nth-child(5) {
-  background-image: url(../assets/project/project-five.png);
+  background-image: url(../assets/project/);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: var(--card-background);
 }
 .card:nth-child(6) {
-  background-image: url(../assets/project/project-six.png);
+  background-image: url(../assets/project/);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
