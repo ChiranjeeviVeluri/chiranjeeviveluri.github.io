@@ -1,0 +1,55 @@
+/* ============================================
+   Shared tabs with sliding indicator
+   (Skills, Experience, case studies)
+   ============================================ */
+
+.tablist {
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.tab {
+  position: relative;
+  z-index: 1;
+  padding: 0.6rem 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-secondary);
+  font: 700 0.82rem "Raleway", sans-serif;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.tab:hover { color: var(--text-color); }
+.tab.is-active { color: #fff; }
+
+.tab-indicator {
+  position: absolute;
+  z-index: 0;
+  border-radius: 999px;
+  background: var(--primary-color);
+  box-shadow: 0 8px 20px rgba(31, 100, 201, 0.35);
+  transition: left 0.45s var(--ease-out), top 0.45s var(--ease-out), width 0.45s var(--ease-out), height 0.45s var(--ease-out);
+}
+
+@media (max-width: 600px) {
+  .tablist {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    border-radius: 16px;
+  }
+
+  .tablist::-webkit-scrollbar { display: none; }
+  .tab { white-space: nowrap; }
+}

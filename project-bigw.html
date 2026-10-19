@@ -1,275 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BIG W Sales Dashboard | Chiranjeevi Veluri</title>
+    <meta name="color-scheme" content="dark light" />
+    <script src="js/theme-init.js"></script>
+    <title>BIG W Sales Performance | Chiranjeevi Veluri</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Sora:wght@600;700;800&display=swap" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utilities.css" />
-    <link rel="stylesheet" href="css/project-woolies.css" />
-    <link rel="stylesheet" href="css/project-bigw.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/glass.css" />
+    <link rel="stylesheet" href="css/case-study.css" />
+    <link rel="stylesheet" href="css/case-layout.css" />
   </head>
-  <body>
+  <body class="cs-page">
     <div class="page-transition page-transition--enter"></div>
+    <div class="bg-fx" aria-hidden="true">
+      <span class="bg-blob bg-blob--1"></span>
+      <span class="bg-blob bg-blob--2"></span>
+      <span class="bg-blob bg-blob--3"></span>
+      <div class="bg-grain"></div>
+    </div>
 
     <!-- Top bar -->
     <div class="pw-topbar">
-      <a href="index.html" class="back-btn transition-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <a href="index.html#projects" class="back-btn transition-link"><i class="fas fa-arrow-left"></i> All Projects</a>
+      <span class="cs-topbar__title">BIG W Sales Performance</span>
       <div class="theme-switch">
-        <input type="checkbox" id="switch" />
+        <input type="checkbox" id="switch" aria-label="Toggle dark mode" checked />
         <label class="toggle-icons" for="switch">
-          <img class="moon" src="assets/moon.svg" alt="Dark mode" />
-          <img class="sun" src="assets/sun.svg" alt="Light mode" />
+          <img class="moon" src="assets/moon.svg" alt="" />
+          <img class="sun" src="assets/sun.svg" alt="" />
         </label>
       </div>
     </div>
 
-    <!-- Hero -->
-    <section class="pw-hero pw-light">
-      <div class="pw-container">
-        <div class="pw-hero__eyebrow">Project Title</div>
-        <h1 class="pw-hero__title">BIG W Sales Performance<br><span class="pw-accent">Store vs E-Retail Analysis</span></h1>
-        <p class="pw-hero__sub">Transforming raw retail sales data into an interactive Excel dashboard to compare Store and E-Retail channel performance across states, categories, and time periods.</p>
-        <div class="pw-hero__row">
-          <div class="pw-hero__tags">
-            <span class="tag">Microsoft Excel</span>
-            <span class="tag">Pivot Tables & Charts</span>
-            <span class="tag">KPI Cards</span>
-            <span class="tag">Interactive Slicers</span>
-            <span class="tag">Retail Analytics</span>
-            <span class="tag">Dashboard Design</span>
-          </div>
-          <a href="https://1drv.ms/x/c/98083f540161e286/IQCGG48uKl-0RISVzdst1qTKAX2zmDQE1kbcP7N2-MIqtYQ?e=yaezaq" class="btn btn-primary">View Workbook <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- KPI Summary -->
-    <section class="pw-section pw-light">
-      <div class="pw-container">
-        <span class="pw-label">At a Glance</span>
-        <h2 class="pw-heading">Dashboard KPIs</h2>
-        <div class="pb-kpi-grid">
-          <div class="pb-kpi-card">
-            <div class="pb-kpi-icon"><i class="fas fa-store"></i></div>
-            <div class="pb-kpi-value">Store</div>
-            <div class="pb-kpi-label">Dominant Sales Channel</div>
-          </div>
-          <div class="pb-kpi-card">
-            <div class="pb-kpi-icon"><i class="fas fa-gamepad"></i></div>
-            <div class="pb-kpi-value">#1</div>
-            <div class="pb-kpi-label">Gaming, Tech & Audio — Top Category</div>
-          </div>
-          <div class="pb-kpi-card">
-            <div class="pb-kpi-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="pb-kpi-value">Multi-State</div>
-            <div class="pb-kpi-label">Coverage Across All Australian States</div>
-          </div>
-          <div class="pb-kpi-card">
-            <div class="pb-kpi-icon"><i class="fas fa-calendar-alt"></i></div>
-            <div class="pb-kpi-value">3 FY</div>
-            <div class="pb-kpi-label">Financial Years Analysed (2024–2026)</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Screenshot placeholder -->
-    <section class="pw-section pw-light">
-      <div class="pw-container">
-        <span class="pw-label">Visual Analysis</span>
-        <h2 class="pw-heading">Dashboard Preview</h2>
-        <div class="pb-screenshot-placeholder">
-          <div class="pb-placeholder-inner">
-            <i class="fas fa-image"></i>
-            <img src="assets/screenshots/bigwd.png" alt="Dashboard" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About + Problem -->
-    <section class="pw-section pw-light">
-      <div class="pw-container pw-two-col">
-        <div>
-          <span class="pw-label">About This Project</span>
-          <h2 class="pw-heading">What Was Built & Why</h2>
-          <p class="pw-body">BIG W operates across both physical stores and an E-Retail channel — but without a unified view, comparing their performance requires digging through raw data manually. This project transformed a multi-year sales dataset into a fully interactive Excel dashboard that enables instant channel comparison at the click of a slicer.</p>
-          <p class="pw-body">Using Pivot Tables, Pivot Charts, KPI cards, and slicers, the dashboard lets stakeholders explore trends across <em class="pw-em">financial years, states, product categories, top buyers, and managers</em> — all from a single screen.</p>
-          <ul class="pw-tool-list">
-            <li><i class="fas fa-check-circle"></i> Pivot Tables & Pivot Charts</li>
-            <li><i class="fas fa-check-circle"></i> Interactive Slicers (Year, State, Channel)</li>
-            <li><i class="fas fa-check-circle"></i> KPI Summary Cards</li>
-            <li><i class="fas fa-check-circle"></i> Line, Column, Bar & Doughnut Charts</li>
-            <li><i class="fas fa-check-circle"></i> Monthly Top Selling Products Analysis</li>
-            <li><i class="fas fa-check-circle"></i> Dashboard Layout & Visual Design</li>
+    <main>
+      <!-- Hero -->
+      <section class="cs-hero cs-container">
+        <div class="cs-hero__text" data-stagger="110">
+          <span class="cs-eyebrow"><span class="cs-eyebrow__num">03</span> Case study · Dashboard design</span>
+          <h1 class="cs-title">BIG W Sales Performance <span class="cs-accent">Store vs E-Retail Analysis</span></h1>
+          <p class="cs-lead">Transforming raw retail sales data into an interactive Excel dashboard to compare Store and E-Retail channel performance across states, categories, and time periods.</p>
+          <ul class="cs-tags">
+            <li>Microsoft Excel</li>
+            <li>Pivot Tables &amp; Charts</li>
+            <li>KPI Cards</li>
+            <li>Interactive Slicers</li>
           </ul>
-        </div>
-        <div>
-          <span class="pw-label">Problem Statement</span>
-          <h2 class="pw-heading">The Business Challenge</h2>
-          <div class="pw-prob-cards">
-            <div class="pw-prob-card">
-              <i class="fas fa-chart-bar"></i>
-              <div>
-                <h3>No Unified Channel View</h3>
-                <p>Store and E-Retail sales data existed separately, making side-by-side performance comparison time-consuming and error-prone.</p>
-              </div>
-            </div>
-            <div class="pw-prob-card">
-              <i class="fas fa-boxes"></i>
-              <div>
-                <h3>Inventory Blind Spots</h3>
-                <p>Without visibility into monthly top-selling products, seasonal demand spikes led to stock shortages and overstocking in key categories.</p>
-              </div>
-            </div>
-            <div class="pw-prob-card">
-              <i class="fas fa-users"></i>
-              <div>
-                <h3>Unrecognised Top Performers</h3>
-                <p>High-value buyers and managers driving disproportionate revenue had no visibility, missing opportunities for retention and recognition.</p>
-              </div>
-            </div>
+          <div class="cs-actions">
+            <a href="https://1drv.ms/x/c/98083f540161e286/IQCGG48uKl-0RISVzdst1qTKAX2zmDQE1kbcP7N2-MIqtYQ?e=yaezaq" class="btn btn-primary magnetic" target="_blank" rel="noopener">View Workbook <i class="fas fa-arrow-right"></i></a>
+            <a href="#findings" class="btn btn-ghost magnetic">Key Findings</a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Methodology + Key Findings -->
-    <section class="pw-section pw-dark">
-      <div class="pw-container">
-        <div class="pw-mf-grid">
-
-          <!-- Methodology -->
-          <div>
-            <span class="pw-label">Methodology</span>
-            <h2 class="pw-heading pw-heading--white">How It Was Done</h2>
-            <div class="pw-steps">
-              <div class="pw-step">
-                <div class="pw-step__num">01</div>
-                <div>
-                  <h3>Data Preparation</h3>
-                  <p>Cleaned and structured the raw sales dataset covering transactions across multiple Australian states, financial years, suburbs, categories, managers, and buyers.</p>
-                </div>
-              </div>
-              <div class="pw-step">
-                <div class="pw-step__num">02</div>
-                <div>
-                  <h3>Pivot Table Modelling</h3>
-                  <p>Built pivot tables to aggregate sales by channel (Store vs E-Retail), financial year, state, product category, buyer, and manager — forming the data backbone of the dashboard.</p>
-                </div>
-              </div>
-              <div class="pw-step">
-                <div class="pw-step__num">03</div>
-                <div>
-                  <h3>Dashboard Design</h3>
-                  <p>Connected pivot charts (Line, Column, Bar, Doughnut) and KPI cards to the pivot models. Added slicers to allow dynamic filtering across all visuals simultaneously.</p>
-                </div>
-              </div>
-              <div class="pw-step">
-                <div class="pw-step__num">04</div>
-                <div>
-                  <h3>Monthly Product Analysis</h3>
-                  <p>Identified the top-selling product category per month to surface seasonal demand patterns and inform inventory and promotional planning.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Key Findings -->
-          <div>
-            <span class="pw-label">Key Findings</span>
-            <h2 class="pw-heading pw-heading--white">Business Insights</h2>
-            <div class="pb-insights">
-              <div class="pb-insight-card">
-                <div class="pb-insight-num">01</div>
-                <div class="pb-insight-body">
-                  <strong>Store Dominates Revenue</strong>
-                  <p>Physical store sales contributed the majority of total revenue, confirming the continued importance of in-store retail for BIG W's business model.</p>
-                </div>
-              </div>
-              <div class="pb-insight-card">
-                <div class="pb-insight-num">02</div>
-                <div class="pb-insight-body">
-                  <strong>Gaming, Tech & Audio Leads</strong>
-                  <p>This category emerged as the highest-performing across most months, driven by consistent consumer demand in electronics and gaming.</p>
-                </div>
-              </div>
-              <div class="pb-insight-card">
-                <div class="pb-insight-num">03</div>
-                <div class="pb-insight-body">
-                  <strong>High-Value Suburbs Identified</strong>
-                  <p>Certain suburbs consistently outperformed others, highlighting key locations for targeted marketing and inventory prioritisation.</p>
-                </div>
-              </div>
-              <div class="pb-insight-card">
-                <div class="pb-insight-num">04</div>
-                <div class="pb-insight-body">
-                  <strong>Seasonal Demand Patterns</strong>
-                  <p>Monthly top-product analysis revealed clear seasonal peaks — actionable for promotions, stock planning, and demand forecasting.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div class="cs-hero__visual glass-stage" data-reveal="scale">
+          <div class="glass-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+          <figure class="cs-frame" data-tilt="4">
+            <div class="cs-frame__bar"><span></span><span></span><span></span><em>bigw-sales-performance.xlsx</em></div>
+            <div class="cs-zoom shimmer"><img src="assets/screenshots/bigwd.png" alt="BIG W sales performance dashboard" /></div>
+          </figure>
+          <div class="cs-float cs-float--a"><span class="mono">3 FY</span> analysed</div>
+          <div class="cs-float cs-float--b"><span class="mono">Store</span> leads revenue</div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Recommendations -->
-    <section class="pw-section pw-dark">
-      <div class="pw-container">
-        <span class="pw-label">Recommendations</span>
-        <h2 class="pw-heading pw-heading--white">Actionable Insights for BIG W</h2>
-        <div class="pw-rec-grid">
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-warehouse"></i></div>
-            <h3>Optimise Inventory Planning</h3>
-            <p>Use monthly top-selling product trends to pre-stock high-demand categories before seasonal peaks, reducing shortages and overstock costs.</p>
+      <!-- In 30 seconds -->
+      <section class="cs-container cs-section" id="overview" data-toc="Overview">
+        <div class="section-head" data-word="OVERVIEW" data-reveal>
+          <span class="section-num">01 — In 30 seconds</span>
+          <h2>The Short Version</h2>
+        </div>
+        <div class="cs-tldr" data-stagger="120">
+          <article class="cs-tldr__card spotlight">
+            <span class="cs-tldr__icon"><i class="fas fa-question"></i></span>
+            <span class="cs-tldr__label">The question</span>
+            <p>How do Store and E-Retail sales compare across states, categories and years?</p>
+          </article>
+          <article class="cs-tldr__card spotlight">
+            <span class="cs-tldr__icon"><i class="fas fa-cogs"></i></span>
+            <span class="cs-tldr__label">What I did</span>
+            <p>Cleaned a multi-year sales dataset and built an interactive Excel dashboard with pivot tables, pivot charts, KPI cards and slicers.</p>
+          </article>
+          <article class="cs-tldr__card spotlight">
+            <span class="cs-tldr__icon"><i class="fas fa-lightbulb"></i></span>
+            <span class="cs-tldr__label">What I found</span>
+            <p>Physical stores drive most revenue, Gaming, Tech &amp; Audio is the top category, and demand follows clear seasonal peaks.</p>
+          </article>
+        </div>
+
+        <div class="cs-kpis" data-stagger="90">
+          <div class="cs-kpi">
+            <span class="cs-kpi__num">Store</span>
+            <span class="cs-kpi__label">Dominant Sales Channel</span>
           </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-laptop"></i></div>
-            <h3>Grow E-Retail Investment</h3>
-            <p>While Store leads revenue, E-Retail shows opportunity for growth. Targeted digital promotions in high-performing categories can close the gap.</p>
+          <div class="cs-kpi">
+            <span class="cs-kpi__num">#1</span>
+            <span class="cs-kpi__label">Gaming, Tech &amp; Audio — Top Category</span>
           </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-map-marked-alt"></i></div>
-            <h3>Focus on High-Value Locations</h3>
-            <p>Prioritise stock allocation, staffing, and promotions for suburbs that consistently drive above-average sales performance.</p>
+          <div class="cs-kpi">
+            <span class="cs-kpi__num">Multi-State</span>
+            <span class="cs-kpi__label">Coverage Across All Australian States</span>
           </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-user-tie"></i></div>
-            <h3>Recognise Top Performers</h3>
-            <p>Top buyers and managers contribute disproportionately to revenue. Retention strategies and performance incentives can safeguard this revenue stream.</p>
-          </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-tags"></i></div>
-            <h3>Plan Promotions Around Peaks</h3>
-            <p>Monthly sales patterns indicate optimal windows for promotions. Aligning discount campaigns with demand peaks maximises conversion and margin.</p>
-          </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Expand Dashboard Scope</h3>
-            <p>Integrating returns, profit margins, and online traffic data would deepen the analysis and enable more precise channel-level decision making.</p>
+          <div class="cs-kpi">
+            <span class="cs-kpi__num" data-count="3" data-suffix=" FY">3 FY</span>
+            <span class="cs-kpi__label">Financial Years Analysed (2024–2026)</span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Dashboard -->
+      <section class="cs-container cs-section" id="dashboard" data-toc="Dashboard">
+        <div class="section-head" data-word="VISUALS" data-reveal>
+          <span class="section-num">02 — Visual Analysis</span>
+          <h2>Dashboard Preview</h2>
+          <p>Click any screenshot to view it full size.</p>
+        </div>
+        <div class="cs-gallery cs-gallery--single" data-stagger="120">
+          <figure class="cs-shot">
+            <div class="cs-frame">
+              <div class="cs-frame__bar"><span></span><span></span><span></span><em>Sales performance dashboard</em></div>
+              <div class="cs-zoom shimmer"><img src="assets/screenshots/bigwd.png" alt="BIG W sales performance dashboard" loading="lazy" /></div>
+            </div>
+            <figcaption>
+              <strong>Store vs E-Retail Dashboard</strong>
+              <span>KPI cards, sales trends, category and suburb breakdowns, top buyers and managers, all filtered by year, state and channel slicers.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="cs-container cs-section" id="process" data-toc="Process">
+        <div class="section-head" data-word="PROCESS" data-reveal>
+          <span class="section-num">03 — Methodology</span>
+          <h2>How It Was Done</h2>
+          <p>Four steps. Select one to see the detail.</p>
+        </div>
+
+        <div class="cs-steps" data-reveal style="--steps: 4">
+          <div class="cs-steps__track" role="tablist" aria-label="Methodology steps">
+            <span class="cs-steps__line" aria-hidden="true"><span class="cs-steps__fill"></span></span>
+            <button class="cs-step is-active" role="tab" id="st1-tab" aria-controls="st1" aria-selected="true"><span class="cs-step__num">01</span><span class="cs-step__name">Preparation</span></button>
+            <button class="cs-step" role="tab" id="st2-tab" aria-controls="st2" aria-selected="false"><span class="cs-step__num">02</span><span class="cs-step__name">Pivot Models</span></button>
+            <button class="cs-step" role="tab" id="st3-tab" aria-controls="st3" aria-selected="false"><span class="cs-step__num">03</span><span class="cs-step__name">Dashboard</span></button>
+            <button class="cs-step" role="tab" id="st4-tab" aria-controls="st4" aria-selected="false"><span class="cs-step__num">04</span><span class="cs-step__name">Seasonality</span></button>
+          </div>
+
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st1" aria-labelledby="st1-tab">
+            <span class="cs-step-panel__num">01</span>
+            <div><h3>Data Preparation</h3><p>Cleaned and structured the raw sales data across states, financial years, suburbs, categories, managers and buyers.</p></div>
+          </div>
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st2" aria-labelledby="st2-tab" hidden>
+            <span class="cs-step-panel__num">02</span>
+            <div><h3>Pivot Table Modelling</h3><p>Aggregated sales by channel, year, state, category, buyer and manager — the backbone of the dashboard.</p></div>
+          </div>
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st3" aria-labelledby="st3-tab" hidden>
+            <span class="cs-step-panel__num">03</span>
+            <div><h3>Dashboard Design</h3><p>Connected pivot charts and KPI cards, with slicers that filter every visual at once.</p></div>
+          </div>
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st4" aria-labelledby="st4-tab" hidden>
+            <span class="cs-step-panel__num">04</span>
+            <div><h3>Monthly Product Analysis</h3><p>Found the top-selling category each month to surface seasonal demand for stock and promotion planning.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Findings -->
+      <section class="cs-container cs-section" id="findings" data-toc="Findings">
+        <div class="section-head" data-word="INSIGHTS" data-reveal>
+          <span class="section-num">04 — Key Findings</span>
+          <h2>Business Insights</h2>
+        </div>
+        <div class="cs-findings" data-stagger="100">
+          <article class="cs-finding cs-finding--wide spotlight">
+            <span class="cs-finding__stat">Store</span>
+            <h3>Store Dominates Revenue</h3>
+            <p>Physical store sales contributed the majority of total revenue, confirming the importance of in-store retail.</p>
+          </article>
+          <article class="cs-finding spotlight">
+            <span class="cs-finding__stat">#1</span>
+            <h3>Gaming, Tech &amp; Audio Leads</h3>
+            <p>The highest-performing category across most months, driven by steady demand for electronics and gaming.</p>
+          </article>
+          <article class="cs-finding spotlight">
+            <span class="cs-finding__stat">Seasonal</span>
+            <h3>Clear Seasonal Demand Peaks</h3>
+            <p>Monthly top-product analysis revealed peaks that can guide promotions and stock planning.</p>
+          </article>
+        </div>
+      </section>
+    </main>
 
     <footer id="footer">
       <div class="container">
         <a href="mailto:velurichiranjeevi2001@gmail.com">velurichiranjeevi2001@gmail.com</a>
         <div class="social">
-          <a href="https://www.linkedin.com/in/veluri-chiranjeevi-5b1b20225" target="_blank"><img src="./assets/linkedin-icon.svg" alt="LinkedIn" /></a>
-          <a href="https://github.com/ChiranjeeviVeluri" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
+          <a href="https://www.linkedin.com/in/veluri-chiranjeevi-5b1b20225" target="_blank" rel="noopener"><img src="./assets/linkedin-icon.svg" alt="LinkedIn" /></a>
+          <a href="https://github.com/ChiranjeeviVeluri" target="_blank" rel="noopener"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
         </div>
         <p>Copyright &copy; Chiranjeevi Veluri <span id="datee"></span>, All rights reserved</p>
       </div>
     </footer>
 
+    <script src="js/case-study.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/project-bigw.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/glass.js"></script>
   </body>
 </html>

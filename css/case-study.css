@@ -1,0 +1,272 @@
+/* ============================================
+   Case study pages: glass top bar, side contents,
+   lightbox, next-project card
+   ============================================ */
+
+.pw-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 2rem;
+  background: color-mix(in srgb, var(--bg-primary) 80%, transparent);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  padding: 0.45rem 1rem;
+  border-radius: 30px;
+  border: 1.5px solid var(--border-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-color);
+  transition: 0.25s ease;
+}
+
+.back-btn:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+.cs-topbar__title {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease, transform 0.35s var(--ease-out);
+}
+
+.pw-topbar.is-condensed .cs-topbar__title {
+  opacity: 1;
+  transform: none;
+}
+
+.cs-next__label {
+  display: block;
+  font: 700 0.72rem var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.cs-next__title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+/* Side contents */
+.cs-toc {
+  position: fixed;
+  top: 50%;
+  right: 1.25rem;
+  z-index: 90;
+  transform: translateY(-50%);
+  display: none;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.6rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.cs-toc button {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-muted);
+  font: 600 0.72rem "Raleway", sans-serif;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.25s, background 0.25s;
+}
+
+.cs-toc button::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.cs-toc button:hover { color: var(--text-color); }
+
+.cs-toc button.is-active {
+  color: var(--primary-color);
+  background: var(--light-blue);
+}
+
+.cs-toc button.is-active::before { transform: scale(1.4); }
+
+@media (min-width: 1440px) {
+  .cs-toc { display: flex; }
+}
+
+/* Zoomable screenshots */
+.cs-zoomable {
+  cursor: zoom-in;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.cs-zoomable:hover { transform: scale(1.015); }
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 1rem 2rem;
+  background: rgba(2, 6, 23, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__frame {
+  max-width: min(1200px, 100%);
+  max-height: calc(100vh - 9rem);
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox__img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 9rem);
+  cursor: zoom-in;
+  transform: scale(0.96);
+  transition: transform 0.45s var(--ease-out);
+}
+
+.lightbox.is-open .lightbox__img { transform: scale(1); }
+.lightbox__img.is-zoomed { transform: scale(2); cursor: zoom-out; }
+
+.lightbox__caption {
+  color: #E2E8F0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.lightbox__btn {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.lightbox__btn:hover { background: var(--primary-color); }
+.lightbox__close { top: 1rem; right: 1rem; }
+.lightbox__prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+.lightbox__next { right: 1rem; top: 50%; transform: translateY(-50%); }
+.lightbox__count { font: 600 0.75rem var(--font-mono); color: #94A3B8; }
+
+/* Next case study */
+.cs-next__card {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  border-radius: 22px;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  color: var(--text-color);
+  transition: border-color 0.3s, transform 0.5s var(--ease-out), box-shadow 0.4s;
+}
+
+.cs-next__card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px rgba(31, 100, 201, 0.16);
+}
+
+.cs-next__img {
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+}
+
+.cs-next__img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-out), opacity 0.5s;
+}
+
+.cs-next__card:hover .cs-next__img img { transform: scale(1.05); }
+
+.cs-next__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.cs-next__cta i { transition: transform 0.35s var(--ease-out); }
+.cs-next__card:hover .cs-next__cta i { transform: translateX(6px); }
+
+@media (max-width: 600px) {
+  .pw-topbar { padding: 0 1rem; }
+  .cs-topbar__title { font-size: 0.8rem; }
+}
+
+@media (max-width: 760px) {
+  .cs-next__card { grid-template-columns: 1fr; gap: 1rem; }
+  .cs-next__body { padding: 0 0.5rem 0.75rem; }
+  .lightbox__prev, .lightbox__next { top: auto; bottom: 1rem; transform: none; }
+}

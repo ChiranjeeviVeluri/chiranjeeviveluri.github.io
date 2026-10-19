@@ -1,0 +1,240 @@
+/* ============================================
+   Education timeline (self-drawing) +
+   Experience tabs with glass cards
+   ============================================ */
+
+/* ----- Education ----- */
+.timeline__progress {
+  position: absolute;
+  left: 130px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(var(--blob-1), var(--blob-2));
+  transform-origin: top;
+  transform: scaleY(var(--p, 0));
+}
+
+.timeline::before { background-color: var(--border-color); }
+
+.timeline .timeline-dot {
+  z-index: 1;
+  background: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  box-shadow: none;
+  animation: none;
+  transition: background 0.4s, border-color 0.4s, box-shadow 0.4s, transform 0.4s var(--ease-out);
+}
+
+.timeline .timeline-dot.is-active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 6px rgba(31, 100, 201, 0.18);
+  transform: scale(1.15);
+}
+
+.timeline-content {
+  flex: 1;
+  margin-left: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  transition: border-color 0.3s, transform 0.4s var(--ease-out);
+}
+
+.timeline-content:hover {
+  border-color: var(--primary-color);
+  transform: translateX(6px);
+}
+
+/* ----- Experience ----- */
+#experience { margin-bottom: 5rem; }
+
+.xp {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.xp-tabs {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1.6rem;
+}
+
+.xp-tabs::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.xp-tabs .tab-indicator {
+  border-radius: 14px;
+  background: var(--light-blue);
+  box-shadow: none;
+}
+
+.xp-tab {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.9rem 1rem;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  color: var(--text-color);
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+}
+
+.xp-tab__dot {
+  position: absolute;
+  left: calc(-1.6rem + 1px);
+  top: 1.15rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  transition: all 0.35s var(--ease-out);
+}
+
+.xp-tab.is-active .xp-tab__dot {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 5px rgba(31, 100, 201, 0.2);
+}
+
+.xp-tab__date {
+  font: 700 0.7rem var(--font-mono);
+  letter-spacing: 0.04em;
+  color: var(--primary-color);
+}
+
+.xp-tab__role {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.xp-tab__co {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.xp-stage { min-width: 0; }
+
+.xp-stage .exp-card[hidden] { display: none; }
+
+.xp-stage .exp-card {
+  border-radius: 22px;
+  animation: xpIn 0.55s var(--ease-out);
+}
+
+@keyframes xpIn {
+  from { opacity: 0; transform: translateY(14px); }
+}
+
+/* Inner glass layer */
+.glass-card .exp-kpi-grid { grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); }
+
+.glass-card .exp-kpi {
+  background: var(--glass-bg-soft);
+  border-color: var(--border-color);
+  transition: transform 0.35s var(--ease-out);
+}
+
+.glass-card .exp-kpi:hover { transform: translateY(-3px); }
+
+.glass-card .exp-tech { background: var(--glass-bg-soft); }
+
+/* Collapsible contributions */
+.xp-more { margin-top: 1.5rem; }
+
+.xp-more summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg-soft);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  list-style: none;
+  transition: border-color 0.3s;
+}
+
+.xp-more summary::-webkit-details-marker { display: none; }
+.xp-more summary:hover { border-color: var(--primary-color); }
+.xp-more summary > span { display: flex; align-items: center; gap: 0.5rem; }
+.xp-more summary .fa-check-circle { color: var(--primary-color); }
+
+.xp-more__chev {
+  color: var(--text-muted);
+  transition: transform 0.35s var(--ease-out);
+}
+
+.xp-more[open] .xp-more__chev { transform: rotate(180deg); }
+
+.xp-more .exp-contrib-list { padding: 1rem 0.25rem 0; }
+
+.xp-more::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition: block-size 0.45s var(--ease-out), content-visibility 0.45s allow-discrete;
+}
+
+.xp-more[open]::details-content { block-size: auto; }
+
+:root { interpolate-size: allow-keywords; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .xp { grid-template-columns: 1fr; gap: 1.25rem; }
+
+  .xp-tabs {
+    position: relative;
+    top: 0;
+    flex-direction: row;
+    padding: 0.35rem;
+    border-radius: 18px;
+    border: 1px solid var(--border-color);
+    background: var(--glass-bg);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .xp-tabs::-webkit-scrollbar { display: none; }
+  .xp-tabs::before,
+  .xp-tab__dot { display: none; }
+
+  .xp-tab { flex: 1 0 auto; min-width: 200px; padding: 0.75rem 1rem; }
+}
+
+@media (max-width: 768px) {
+  .timeline__progress { left: 75px; }
+}
+
+@media (max-width: 480px) {
+  .timeline__progress { left: 6px; }
+  .timeline-content { margin-left: 0; padding: 1rem 1.1rem; }
+  .timeline .timeline-dot { position: absolute; left: 0; top: 0.25rem; margin: 0; }
+  .xp-tab { min-width: 170px; }
+}

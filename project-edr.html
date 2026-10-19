@@ -1,313 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <script src="js/theme-init.js"></script>
     <title>Everyday Rewards Loyalty KPI Dashboard | Chiranjeevi Veluri</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Sora:wght@600;700;800&display=swap" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utilities.css" />
-    <link rel="stylesheet" href="css/project-woolies.css" />
-    <link rel="stylesheet" href="css/project-edr.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/glass.css" />
+    <link rel="stylesheet" href="css/case-study.css" />
+    <link rel="stylesheet" href="css/case-layout.css" />
   </head>
-  <body>
+  <body class="cs-page">
     <div class="page-transition page-transition--enter"></div>
+    <div class="bg-fx" aria-hidden="true">
+      <span class="bg-blob bg-blob--1"></span>
+      <span class="bg-blob bg-blob--2"></span>
+      <span class="bg-blob bg-blob--3"></span>
+      <div class="bg-grain"></div>
+    </div>
 
     <!-- Top bar -->
     <div class="pw-topbar">
-      <a href="index.html" class="back-btn transition-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <a href="index.html#projects" class="back-btn transition-link"><i class="fas fa-arrow-left"></i> All Projects</a>
+      <span class="cs-topbar__title">Everyday Rewards Loyalty KPI Dashboard</span>
       <div class="theme-switch">
-        <input type="checkbox" id="switch" />
+        <input type="checkbox" id="switch" aria-label="Toggle dark mode" checked />
         <label class="toggle-icons" for="switch">
-          <img class="moon" src="assets/moon.svg" alt="Dark mode" />
-          <img class="sun" src="assets/sun.svg" alt="Light mode" />
+          <img class="moon" src="assets/moon.svg" alt="" />
+          <img class="sun" src="assets/sun.svg" alt="" />
         </label>
       </div>
     </div>
 
-    <!-- Hero -->
-    <section class="pw-hero pw-light">
-      <div class="pw-container">
-        <div class="pw-hero__eyebrow">Project Title</div>
-        <h1 class="pw-hero__title">Everyday Rewards<br><span class="pw-accent">Loyalty KPI Dashboard</span></h1>
-        <p class="pw-hero__sub">An interactive Power BI dashboard analysing Everyday Rewards loyalty program performance across Sydney stores — tracking member engagement, points activity, and reward redemption to support data-driven retention strategy.</p>
-        <div class="pw-hero__row">
-          <div class="pw-hero__tags">
-            <span class="tag">Power BI</span>
-            <span class="tag">DAX</span>
-            <span class="tag">Data Modelling</span>
-            <span class="tag">KPI Tracking</span>
-            <span class="tag">Customer Segmentation</span>
-            <span class="tag">Business Intelligence</span>
-          </div>
-          <a href="#" class="btn btn-primary">View Dashboard <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </section>
-
-        <!-- Screenshots -->
-    <section class="pw-section pw-light">
-      <div class="pw-container">
-        <span class="pw-label">Visual Analysis</span>
-        <h2 class="pw-heading">Dashboard Preview</h2>
-        <div class="pw-screenshots">
-          <div class="pw-screenshot">
-            <img src="assets/screenshots/edr-dashboard.png" alt="Everyday Rewards Loyalty KPI Overview" loading="lazy" />
-            <div class="pw-screenshot__cap">
-              <strong>Loyalty KPI Overview</strong>
-              <p>KPI cards, registration trends, points earned vs redeemed, and top-performing store locations at a glance.</p>
-            </div>
-          </div>
-          <div class="pw-screenshot">
-            <img src="assets/screenshots/edr-drillthrough.png" alt="Store Drill-Through Page" loading="lazy" />
-            <div class="pw-screenshot__cap">
-              <strong>Store Drill-Through Page</strong>
-              <p>Store-specific KPIs, customer rankings, trend analysis, and automated business insights.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- KPI Summary -->
-    <section class="pw-section pw-light">
-      <div class="pw-container">
-        <span class="pw-label">At a Glance</span>
-        <h2 class="pw-heading">Dashboard KPIs</h2>
-        <div class="pe-kpi-grid">
-          <div class="pe-kpi-card">
-            <div class="pe-kpi-icon"><i class="fas fa-users"></i></div>
-            <div class="pe-kpi-value">Members</div>
-            <div class="pe-kpi-label">Total Loyalty Members Tracked</div>
-          </div>
-          <div class="pe-kpi-card">
-            <div class="pe-kpi-icon"><i class="fas fa-exchange-alt"></i></div>
-            <div class="pe-kpi-value">Transactions</div>
-            <div class="pe-kpi-label">Purchase Activity Monitored</div>
-          </div>
-          <div class="pe-kpi-card">
-            <div class="pe-kpi-icon"><i class="fas fa-coins"></i></div>
-            <div class="pe-kpi-value">Points</div>
-            <div class="pe-kpi-label">Earned vs Redeemed Comparison</div>
-          </div>
-          <div class="pe-kpi-card">
-            <div class="pe-kpi-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="pe-kpi-value">Sydney</div>
-            <div class="pe-kpi-label">Store Locations Analysed</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- About + Problem -->
-    <section class="pw-section pw-light">
-      <div class="pw-container pw-two-col">
-        <div>
-          <span class="pw-label">About This Project</span>
-          <h2 class="pw-heading">What Was Built & Why</h2>
-          <p class="pw-body">Designed and developed an interactive Power BI dashboard to analyse the performance of the Everyday Rewards loyalty program across Sydney stores. The dashboard enables business users to monitor key loyalty metrics, evaluate customer engagement, and identify opportunities to improve reward redemption and member participation.</p>
-          <p class="pw-body">The solution provides an executive-level overview of the loyalty program through dynamic KPIs, trend analysis, <em class="pw-em">customer segmentation</em>, and location-based performance monitoring, with year and store-level filtering for deeper drill-down.</p>
-          <ul class="pw-tool-list">
-            <li><i class="fas fa-check-circle"></i> KPI Cards & Trend Analysis</li>
-            <li><i class="fas fa-check-circle"></i> DAX Measures & Data Modelling</li>
-            <li><i class="fas fa-check-circle"></i> Customer Segmentation (Active / Inactive / Suspended)</li>
-            <li><i class="fas fa-check-circle"></i> Reward Redemption by Category</li>
-            <li><i class="fas fa-check-circle"></i> Store-Level Drill-Through Page</li>
-            <li><i class="fas fa-check-circle"></i> Interactive Slicers & Cross-Filtering</li>
+    <main>
+      <!-- Hero -->
+      <section class="cs-hero cs-container">
+        <div class="cs-hero__text" data-stagger="110">
+          <span class="cs-eyebrow"><span class="cs-eyebrow__num">04</span> Case study · Loyalty KPIs</span>
+          <h1 class="cs-title">Everyday Rewards <span class="cs-accent">Loyalty KPI Dashboard</span></h1>
+          <p class="cs-lead">An interactive Power BI dashboard analysing Everyday Rewards loyalty program performance across Sydney stores — tracking member engagement, points activity, and reward redemption to support data-driven retention strategy.</p>
+          <ul class="cs-tags">
+            <li>Power BI</li>
+            <li>DAX</li>
+            <li>Data Modelling</li>
+            <li>Customer Segmentation</li>
           </ul>
-        </div>
-        <div>
-          <span class="pw-label">Problem Statement</span>
-          <h2 class="pw-heading">The Business Challenge</h2>
-          <div class="pw-prob-cards">
-            <div class="pw-prob-card">
-              <i class="fas fa-chart-line"></i>
-              <div>
-                <h3>No Unified Performance View</h3>
-                <p>Loyalty program metrics were scattered across sources, making it difficult to monitor engagement and redemption at a glance.</p>
-              </div>
-            </div>
-            <div class="pw-prob-card">
-              <i class="fas fa-user-friends"></i>
-              <div>
-                <h3>Unclear Member Engagement</h3>
-                <p>Without visibility into active, inactive, and suspended members, retention opportunities were being missed.</p>
-              </div>
-            </div>
-            <div class="pw-prob-card">
-              <i class="fas fa-gift"></i>
-              <div>
-                <h3>Redemption Behaviour Untracked</h3>
-                <p>Limited insight into which reward categories customers redeem made it hard to plan targeted, effective promotions.</p>
-              </div>
-            </div>
+          <div class="cs-actions">
+            <a href="#" class="btn btn-primary magnetic">View Dashboard <i class="fas fa-arrow-right"></i></a>
+            <a href="#findings" class="btn btn-ghost magnetic">Key Findings</a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Methodology + Key Findings -->
-    <section class="pw-section pw-dark">
-      <div class="pw-container">
-        <div class="pw-mf-grid">
-
-          <!-- Methodology -->
-          <div>
-            <span class="pw-label">Methodology</span>
-            <h2 class="pw-heading pw-heading--white">How It Was Done</h2>
-            <div class="pw-steps">
-              <div class="pw-step">
-                <div class="pw-step__num">01</div>
-                <div>
-                  <h3>Data Preparation</h3>
-                  <p>Cleaned and structured loyalty transaction data covering members, stores, points earned and redeemed, and reward categories across Sydney locations.</p>
-                </div>
-              </div>
-              <div class="pw-step">
-                <div class="pw-step__num">02</div>
-                <div>
-                  <h3>Data Modelling & DAX</h3>
-                  <p>Built a relational data model and DAX measures to calculate KPIs including total members, transactions, points earned, points redeemed, and transaction value.</p>
-                </div>
-              </div>
-              <div class="pw-step">
-                <div class="pw-step__num">03</div>
-                <div>
-                  <h3>Dashboard Design</h3>
-                  <p>Designed KPI cards, trend visuals, and segmentation charts, connected to year and store slicers for dynamic, cross-filtered exploration.</p>
-                </div>
-              </div>
-              <div class="pw-step">
-                <div class="pw-step__num">04</div>
-                <div>
-                  <h3>Drill-Through Page</h3>
-                  <p>Built a store-specific drill-through page with customer rankings, KPI comparisons, trend analysis, and automated business insights.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Key Findings -->
-          <div>
-            <span class="pw-label">Key Findings</span>
-            <h2 class="pw-heading pw-heading--white">Business Insights</h2>
-            <div class="pe-insights">
-              <div class="pe-insight-card">
-                <div class="pe-insight-num">01</div>
-                <div class="pe-insight-body">
-                  <strong>Steady Member Growth</strong>
-                  <p>Customer registration trends show consistent growth, reflecting strong ongoing uptake of the loyalty program.</p>
-                </div>
-              </div>
-              <div class="pe-insight-card">
-                <div class="pe-insight-num">02</div>
-                <div class="pe-insight-body">
-                  <strong>Points Earned Outpace Redemption</strong>
-                  <p>Points earned consistently exceed points redeemed, pointing to untapped reward value and an opportunity to drive redemption.</p>
-                </div>
-              </div>
-              <div class="pe-insight-card">
-                <div class="pe-insight-num">03</div>
-                <div class="pe-insight-body">
-                  <strong>Concentrated Store Performance</strong>
-                  <p>A small group of Sydney stores accounts for a disproportionate share of loyalty point activity, highlighting where engagement is strongest.</p>
-                </div>
-              </div>
-              <div class="pe-insight-card">
-                <div class="pe-insight-num">04</div>
-                <div class="pe-insight-body">
-                  <strong>Clear Category Preferences</strong>
-                  <p>Redemption activity varies meaningfully across shopping discounts, fuel discounts, and partner rewards, revealing distinct member preferences.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="pe-mini-grid">
-              <div class="pe-mini-card">
-                <i class="fas fa-user-check"></i>
-                <span>Active Members</span>
-              </div>
-              <div class="pe-mini-card">
-                <i class="fas fa-user-clock"></i>
-                <span>Inactive Members</span>
-              </div>
-              <div class="pe-mini-card">
-                <i class="fas fa-user-slash"></i>
-                <span>Suspended Members</span>
-              </div>
-              <div class="pe-mini-card">
-                <i class="fas fa-shopping-bag"></i>
-                <span>Shopping Discounts</span>
-              </div>
-              <div class="pe-mini-card">
-                <i class="fas fa-gas-pump"></i>
-                <span>Fuel Discounts</span>
-              </div>
-              <div class="pe-mini-card">
-                <i class="fas fa-handshake"></i>
-                <span>Partner Rewards</span>
-              </div>
-            </div>
-          </div>
-
+        <div class="cs-hero__visual glass-stage" data-reveal="scale">
+          <div class="glass-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+          <figure class="cs-frame" data-tilt="4">
+            <div class="cs-frame__bar"><span></span><span></span><span></span><em>everyday-rewards-kpi.pbix</em></div>
+            <div class="cs-zoom shimmer"><img src="assets/screenshots/edr-dashboard.png" alt="Everyday Rewards Loyalty KPI Overview" /></div>
+          </figure>
+          <div class="cs-float cs-float--a"><span class="mono">10,000</span> members</div>
+          <div class="cs-float cs-float--b"><span class="mono">106K</span> transactions</div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Recommendations -->
-    <section class="pw-section pw-dark">
-      <div class="pw-container">
-        <span class="pw-label">Recommendations</span>
-        <h2 class="pw-heading pw-heading--white">Actionable Insights for Everyday Rewards</h2>
-        <div class="pw-rec-grid">
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Monitor Program Health</h3>
-            <p>Use the KPI overview to track member growth, transactions, and points activity as ongoing measures of loyalty program performance.</p>
+      <!-- In 30 seconds -->
+      <section class="cs-container cs-section" id="overview" data-toc="Overview">
+        <div class="section-head" data-word="OVERVIEW" data-reveal>
+          <span class="section-num">01 — In 30 seconds</span>
+          <h2>The Short Version</h2>
+        </div>
+        <div class="cs-tldr" data-stagger="120">
+          <article class="cs-tldr__card spotlight">
+            <span class="cs-tldr__icon"><i class="fas fa-question"></i></span>
+            <span class="cs-tldr__label">The question</span>
+            <p>How engaged are loyalty members across Sydney stores, and are they redeeming their points?</p>
+          </article>
+          <article class="cs-tldr__card spotlight">
+            <span class="cs-tldr__icon"><i class="fas fa-cogs"></i></span>
+            <span class="cs-tldr__label">What I did</span>
+            <p>Modelled loyalty transaction data and built a two-page Power BI dashboard with DAX measures, member segmentation and a store drill-through.</p>
+          </article>
+          <article class="cs-tldr__card spotlight">
+            <span class="cs-tldr__icon"><i class="fas fa-lightbulb"></i></span>
+            <span class="cs-tldr__label">What I found</span>
+            <p>Membership is growing steadily, but points earned far outpace redemptions, and a few stores drive most of the activity.</p>
+          </article>
+        </div>
+
+        <div class="cs-kpis" data-stagger="90">
+          <div class="cs-kpi">
+            <span class="cs-kpi__num" data-count="10000">10,000</span>
+            <span class="cs-kpi__label">Members Registered (2023)</span>
           </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-user-check"></i></div>
-            <h3>Improve Member Retention</h3>
-            <p>Target inactive and suspended segments with re-engagement campaigns informed by the member status breakdown.</p>
+          <div class="cs-kpi">
+            <span class="cs-kpi__num" data-count="106" data-suffix="K">106K</span>
+            <span class="cs-kpi__label">Transactions (to FY 2024)</span>
           </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-store"></i></div>
-            <h3>Replicate Top Store Strategies</h3>
-            <p>Study the practices of top-performing stores and apply successful engagement tactics across underperforming locations.</p>
+          <div class="cs-kpi">
+            <span class="cs-kpi__num" data-count="31.1" data-decimals="1" data-suffix="M">31.1M</span>
+            <span class="cs-kpi__label">Points Earned</span>
           </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-gift"></i></div>
-            <h3>Rebalance Reward Mix</h3>
-            <p>Use redemption-by-category data to prioritise the reward types members value most, closing the gap between points earned and redeemed.</p>
-          </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-bullhorn"></i></div>
-            <h3>Target High-Value Customers</h3>
-            <p>Leverage top earner and redeemer rankings to design personalised offers and recognition for high-value members.</p>
-          </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-expand-arrows-alt"></i></div>
-            <h3>Expand Dashboard Scope</h3>
-            <p>Incorporate campaign response and basket-level data to deepen segmentation and sharpen future retention strategy.</p>
+          <div class="cs-kpi">
+            <span class="cs-kpi__num" data-count="772" data-suffix="K">772K</span>
+            <span class="cs-kpi__label">Points Redeemed</span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Dashboard -->
+      <section class="cs-container cs-section" id="dashboard" data-toc="Dashboard">
+        <div class="section-head" data-word="VISUALS" data-reveal>
+          <span class="section-num">02 — Visual Analysis</span>
+          <h2>Dashboard Preview</h2>
+          <p>Click any screenshot to view it full size.</p>
+        </div>
+        <div class="cs-gallery" data-stagger="120">
+          <figure class="cs-shot">
+            <div class="cs-frame">
+              <div class="cs-frame__bar"><span></span><span></span><span></span><em>Page 1 · KPI overview</em></div>
+              <div class="cs-zoom shimmer"><img src="assets/screenshots/edr-dashboard.png" alt="Everyday Rewards Loyalty KPI Overview" loading="lazy" /></div>
+            </div>
+            <figcaption>
+              <strong>Loyalty KPI Overview</strong>
+              <span>KPI cards, registration trends, points earned vs redeemed and top store locations.</span>
+            </figcaption>
+          </figure>
+          <figure class="cs-shot">
+            <div class="cs-frame">
+              <div class="cs-frame__bar"><span></span><span></span><span></span><em>Page 2 · Store drill-through</em></div>
+              <div class="cs-zoom shimmer"><img src="assets/screenshots/edr-drillthrough.png" alt="Store Drill-Through Page" loading="lazy" /></div>
+            </div>
+            <figcaption>
+              <strong>Store Drill-Through</strong>
+              <span>Store-level KPIs, customer rankings, trends and automated insights.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="cs-container cs-section" id="process" data-toc="Process">
+        <div class="section-head" data-word="PROCESS" data-reveal>
+          <span class="section-num">03 — Methodology</span>
+          <h2>How It Was Done</h2>
+          <p>Four steps. Select one to see the detail.</p>
+        </div>
+
+        <div class="cs-steps" data-reveal style="--steps: 4">
+          <div class="cs-steps__track" role="tablist" aria-label="Methodology steps">
+            <span class="cs-steps__line" aria-hidden="true"><span class="cs-steps__fill"></span></span>
+            <button class="cs-step is-active" role="tab" id="st1-tab" aria-controls="st1" aria-selected="true"><span class="cs-step__num">01</span><span class="cs-step__name">Preparation</span></button>
+            <button class="cs-step" role="tab" id="st2-tab" aria-controls="st2" aria-selected="false"><span class="cs-step__num">02</span><span class="cs-step__name">DAX Model</span></button>
+            <button class="cs-step" role="tab" id="st3-tab" aria-controls="st3" aria-selected="false"><span class="cs-step__num">03</span><span class="cs-step__name">Dashboard</span></button>
+            <button class="cs-step" role="tab" id="st4-tab" aria-controls="st4" aria-selected="false"><span class="cs-step__num">04</span><span class="cs-step__name">Drill-Through</span></button>
+          </div>
+
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st1" aria-labelledby="st1-tab">
+            <span class="cs-step-panel__num">01</span>
+            <div><h3>Data Preparation</h3><p>Cleaned loyalty transaction data covering members, stores, points earned and redeemed, and reward categories.</p></div>
+          </div>
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st2" aria-labelledby="st2-tab" hidden>
+            <span class="cs-step-panel__num">02</span>
+            <div><h3>Data Modelling &amp; DAX</h3><p>Built a relational model and DAX measures for members, transactions, points earned, points redeemed and transaction value.</p></div>
+          </div>
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st3" aria-labelledby="st3-tab" hidden>
+            <span class="cs-step-panel__num">03</span>
+            <div><h3>Dashboard Design</h3><p>KPI cards, trend visuals and segmentation charts, cross-filtered by year and store slicers.</p></div>
+          </div>
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st4" aria-labelledby="st4-tab" hidden>
+            <span class="cs-step-panel__num">04</span>
+            <div><h3>Store Drill-Through Page</h3><p>A store-specific page with customer rankings, KPI comparisons, trends and automated insights.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Findings -->
+      <section class="cs-container cs-section" id="findings" data-toc="Findings">
+        <div class="section-head" data-word="INSIGHTS" data-reveal>
+          <span class="section-num">04 — Key Findings</span>
+          <h2>Business Insights</h2>
+        </div>
+        <div class="cs-findings" data-stagger="100">
+          <article class="cs-finding cs-finding--wide spotlight">
+            <span class="cs-finding__stat">31.1M <small>vs</small> 772K</span>
+            <h3>Points Earned Outpace Redemption</h3>
+            <p>Members earn far more points than they redeem — untapped reward value and a clear opportunity to drive redemption.</p>
+          </article>
+          <article class="cs-finding spotlight">
+            <span class="cs-finding__stat">Growth</span>
+            <h3>Steady Member Growth</h3>
+            <p>Registration trends show consistent uptake of the loyalty program.</p>
+          </article>
+          <article class="cs-finding spotlight">
+            <span class="cs-finding__stat">Top stores</span>
+            <h3>Concentrated Store Performance</h3>
+            <p>A small group of Sydney stores accounts for a disproportionate share of points activity.</p>
+          </article>
+        </div>
+      </section>
+    </main>
 
     <footer id="footer">
       <div class="container">
         <a href="mailto:velurichiranjeevi2001@gmail.com">velurichiranjeevi2001@gmail.com</a>
         <div class="social">
-          <a href="https://www.linkedin.com/in/veluri-chiranjeevi-5b1b20225" target="_blank"><img src="./assets/linkedin-icon.svg" alt="LinkedIn" /></a>
-          <a href="https://github.com/ChiranjeeviVeluri" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
+          <a href="https://www.linkedin.com/in/veluri-chiranjeevi-5b1b20225" target="_blank" rel="noopener"><img src="./assets/linkedin-icon.svg" alt="LinkedIn" /></a>
+          <a href="https://github.com/ChiranjeeviVeluri" target="_blank" rel="noopener"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
         </div>
         <p>Copyright &copy; Chiranjeevi Veluri <span id="datee"></span>, All rights reserved</p>
       </div>
     </footer>
 
+    <script src="js/case-study.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/project-edr.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/glass.js"></script>
   </body>
 </html>

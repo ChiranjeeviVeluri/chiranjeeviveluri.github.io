@@ -1,295 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <script src="js/theme-init.js"></script>
     <title>NSW Property Market Intelligence | Chiranjeevi Veluri</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Sora:wght@600;700;800&display=swap" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utilities.css" />
-    <link rel="stylesheet" href="css/project-woolies.css" />
-    <link rel="stylesheet" href="css/project-nsw.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/glass.css" />
+    <link rel="stylesheet" href="css/case-study.css" />
+    <link rel="stylesheet" href="css/case-layout.css" />
   </head>
-  <body>
+  <body class="cs-page">
     <div class="page-transition page-transition--enter"></div>
+    <div class="bg-fx" aria-hidden="true">
+      <span class="bg-blob bg-blob--1"></span>
+      <span class="bg-blob bg-blob--2"></span>
+      <span class="bg-blob bg-blob--3"></span>
+      <div class="bg-grain"></div>
+    </div>
 
     <!-- Top bar -->
     <div class="pw-topbar">
-      <a href="index.html" class="back-btn transition-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <a href="index.html#projects" class="back-btn transition-link"><i class="fas fa-arrow-left"></i> All Projects</a>
+      <span class="cs-topbar__title">NSW Property Market Intelligence</span>
       <div class="theme-switch">
-        <input type="checkbox" id="switch" />
+        <input type="checkbox" id="switch" aria-label="Toggle dark mode" checked />
         <label class="toggle-icons" for="switch">
-          <img class="moon" src="assets/moon.svg" alt="Dark mode" />
-          <img class="sun" src="assets/sun.svg" alt="Light mode" />
+          <img class="moon" src="assets/moon.svg" alt="" />
+          <img class="sun" src="assets/sun.svg" alt="" />
         </label>
       </div>
     </div>
 
-    <!-- Hero -->
-    <section class="pw-hero pw-light">
-      <div class="pw-container">
-        <div class="pw-hero__eyebrow">Project Title</div>
-        <h1 class="pw-hero__title">NSW Residential Property<br><span class="pw-accent">Market Intelligence</span></h1>
-        <p class="pw-hero__sub">Cleaning, enriching, and modelling 2.2 million real NSW government property sale records into a verified data warehouse and interactive dashboard revealing how location, socio-economic profile, and property type drive housing prices across the state.</p>
-        <div class="pw-hero__row">
-          <div class="pw-hero__tags">
-            <span class="tag">Python (Pandas)</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">SQL Window Functions</span>
-            <span class="tag">Power BI</span>
-            <span class="tag">DAX</span>
-            <span class="tag">Data Warehousing</span>
-            <span class="tag">Star Schema Design</span>
-            <span class="tag">ABS SEIFA Enrichment</span>
-          </div>
-          <a href="#" class="btn btn-primary">View Dashboard <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- KPI Summary -->
-    <section class="pw-section pw-light">
-      <div class="pw-container">
-        <span class="pw-label">At a Glance</span>
-        <h2 class="pw-heading">Warehouse & Model Scale</h2>
-        <div class="pn-kpi-grid">
-          <div class="pn-kpi-card">
-            <div class="pn-kpi-icon"><i class="fas fa-database"></i></div>
-            <div class="pn-kpi-value">2.2M+</div>
-            <div class="pn-kpi-label">Raw Government Sale Records Loaded</div>
-          </div>
-          <div class="pn-kpi-card">
-            <div class="pn-kpi-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="pn-kpi-value">608</div>
-            <div class="pn-kpi-label">NSW Postcodes Modelled</div>
-          </div>
-          <div class="pn-kpi-card">
-            <div class="pn-kpi-icon"><i class="fas fa-server"></i></div>
-            <div class="pn-kpi-value">1.2M+</div>
-            <div class="pn-kpi-label">Verified Sales in the Warehouse</div>
-          </div>
-          <div class="pn-kpi-card">
-            <div class="pn-kpi-icon"><i class="fas fa-layer-group"></i></div>
-            <div class="pn-kpi-value">4</div>
-            <div class="pn-kpi-label">ABS SEIFA Indexes Integrated</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Screenshots -->
-    <section class="pw-section pw-light">
-      <div class="pw-container">
-        <span class="pw-label">Visual Analysis</span>
-        <h2 class="pw-heading">Dashboard Outputs</h2>
-        <div class="pn-screenshots">
-          <div class="pn-screenshot">
-            <img src="assets/screenshots/nswsc1.png" alt="NSW Market Overview & Insights dashboard page" loading="lazy" />
-            <div class="pn-screenshot__cap">
-              <strong>Market Overview & Insights</strong>
-              <p>State-wide KPIs, the 2021 price boom across houses vs units, market composition, a postcode-level sales map, the socio-economic price relationship, and a live fastest-growing-suburbs leaderboard.</p>
-            </div>
-          </div>
-          <div class="pn-screenshot">
-            <img src="assets/screenshots/nswsc1.png" alt="NSW Suburb Explorer dashboard page" loading="lazy" />
-            <div class="pn-screenshot__cap">
-              <strong>Suburb Explorer</strong>
-              <p>An interactive drill-down across 608 NSW postcodes' worth of suburbs, with a live Suburb vs. State comparison table against the state median.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About + Problem -->
-    <section class="pw-section pw-light">
-      <div class="pw-container pw-two-col">
-        <div>
-          <span class="pw-label">About This Project</span>
-          <h2 class="pw-heading">What Was Built & Why</h2>
-          <p class="pw-body">Most public commentary on the NSW property market treats it as one undifferentiated number. This project builds the infrastructure to ask sharper questions of genuine NSW Government Valuer General sale-record data — not a sample — covering every residential transaction from 2018 to the current year.</p>
-          <p class="pw-body">The raw, messy government feed is taken through a full real-world pipeline: cleaning and validating <em class="pw-em">2.2 million rows</em> in Python, enriching it with official ABS socio-economic indexes, designing a relational data warehouse in MySQL, writing analytical SQL with genuine window functions, and building a two-page interactive Power BI dashboard on top.</p>
-          <ul class="pw-tool-list">
-            <li><i class="fas fa-check-circle"></i> Python/Pandas Cleaning at Scale</li>
-            <li><i class="fas fa-check-circle"></i> ABS Census-Derived Index Enrichment</li>
-            <li><i class="fas fa-check-circle"></i> Relational Database Design (Star Schema)</li>
-            <li><i class="fas fa-check-circle"></i> Advanced SQL — CTEs, LAG, NTILE</li>
-            <li><i class="fas fa-check-circle"></i> Power BI Data Modelling & DAX</li>
+    <main>
+      <!-- Hero -->
+      <section class="cs-hero cs-container">
+        <div class="cs-hero__text" data-stagger="110">
+          <span class="cs-eyebrow"><span class="cs-eyebrow__num">01</span> Case study · Data warehouse + BI</span>
+          <h1 class="cs-title">NSW Residential Property <span class="cs-accent">Market Intelligence</span></h1>
+          <p class="cs-lead">Cleaning, enriching, and modelling 2.2 million real NSW government property sale records into a verified data warehouse and interactive dashboard revealing how location, socio-economic profile, and property type drive housing prices across the state.</p>
+          <ul class="cs-tags">
+            <li>Python (Pandas)</li>
+            <li>MySQL</li>
+            <li>SQL Window Functions</li>
+            <li>Power BI</li>
+            <li>DAX</li>
           </ul>
-        </div>
-        <div>
-          <span class="pw-label">Problem Statement</span>
-          <h2 class="pw-heading">The Business Challenge</h2>
-          <div class="pw-prob-cards">
-            <div class="pw-prob-card">
-              <i class="fas fa-database"></i>
-              <div>
-                <h3>Fragmented, Unverified Data</h3>
-                <p>Government property data arrives as a raw weekly-snapshot feed with no deduplication, mixed units, and no quality flags — unusable without cleaning and validation first.</p>
-              </div>
-            </div>
-            <div class="pw-prob-card">
-              <i class="fas fa-balance-scale"></i>
-              <div>
-                <h3>Price Without Context</h3>
-                <p>A sale price alone says nothing about genuine market value versus an area's socio-economic profile — without linking to demographic indexes, the two are easy to conflate.</p>
-              </div>
-            </div>
-            <div class="pw-prob-card">
-              <i class="fas fa-search-location"></i>
-              <div>
-                <h3>No Fast Way to Benchmark</h3>
-                <p>Comparing one suburb against the state across 1.2 million+ sales isn't something a static spreadsheet can do — it needs a tool that recalculates as the question changes.</p>
-              </div>
-            </div>
+          <div class="cs-actions">
+            <a href="#" class="btn btn-primary magnetic">View Dashboard <i class="fas fa-arrow-right"></i></a>
+            <a href="#findings" class="btn btn-ghost magnetic">Key Findings</a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Methodology + Key Findings -->
-    <section class="pw-section pw-dark">
-      <div class="pw-container">
-        <div class="pw-mf-grid">
-
-          <!-- Methodology -->
-          <div>
-            <span class="pw-label">Methodology</span>
-            <h2 class="pw-heading pw-heading--white">How It Was Done</h2>
-            <div class="pw-steps">
-              <div class="pw-step">
-                <div class="pw-step__num">01</div>
-                <div>
-                  <h3>Data Sourcing & Cleaning</h3>
-                  <p>Loaded 2,206,232 raw records and resolved seven real data-quality issues, including 560,545 duplicate rows, mixed price scales, mixed land-area units, and inconsistent property-type labels.</p>
-                </div>
-              </div>
-              <div class="pw-step">
-                <div class="pw-step__num">02</div>
-                <div>
-                  <h3>Socio-Economic Enrichment</h3>
-                  <p>Joined all four ABS SEIFA 2021 indexes, including IRSAD, onto the cleaned sales data by postcode — achieving a 100% match rate across every NSW postcode.</p>
-                </div>
-              </div>
-              <div class="pw-step">
-                <div class="pw-step__num">03</div>
-                <div>
-                  <h3>Relational Warehouse Design</h3>
-                  <p>Normalised the data into a MySQL star schema: a fact_property_sales table referencing a dim_postcode_seifa dimension table, avoiding repeated socio-economic figures per postcode.</p>
-                </div>
-              </div>
-              <div class="pw-step">
-                <div class="pw-step__num">04</div>
-                <div>
-                  <h3>Analytical SQL</h3>
-                  <p>Wrote queries using LAG for year-over-year growth and NTILE for price-quartile ranking, including suburb-relative outlier detection comparing each sale to its own suburb's typical price.</p>
-                </div>
-              </div>
-              <div class="pw-step">
-                <div class="pw-step__num">05</div>
-                <div>
-                  <h3>Interactive Power BI Dashboard</h3>
-                  <p>Connected Power BI directly to the MySQL warehouse and built a full DAX measure library across a two-page, 16:9 state-wide overview and suburb-level drill-down.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Key Findings -->
-          <div>
-            <span class="pw-label">Key Findings</span>
-            <h2 class="pw-heading pw-heading--white">What the Data Revealed</h2>
-            <div class="pn-insights">
-              <div class="pn-insight-card">
-                <div class="pn-insight-stat">+26% vs +13%</div>
-                <div class="pn-insight-body">
-                  <strong>Houses Outpaced Units in the 2021 Boom</strong>
-                  <p>In the single biggest boom year, house prices grew at roughly double the rate of units — consistent with the COVID-era shift toward space over apartment living.</p>
-                </div>
-              </div>
-              <div class="pn-insight-card">
-                <div class="pn-insight-stat">2.3×</div>
-                <div class="pn-insight-body">
-                  <strong>Price Tracks Socio-Economic Advantage</strong>
-                  <p>Median price climbs near-monotonically from $555K in the most disadvantaged SEIFA decile to $1.3M in the most advantaged, confirmed independently in SQL.</p>
-                </div>
-              </div>
-              <div class="pn-insight-card">
-                <div class="pn-insight-stat">Regional</div>
-                <div class="pn-insight-body">
-                  <strong>Regional NSW Outperforming the Capital</strong>
-                  <p>The fastest-growing suburbs cluster around Albury-Wagga, Newcastle/Lake Macquarie, the Snowy Mountains and Hunter Valley — not Sydney addresses.</p>
-                </div>
-              </div>
-              <div class="pn-insight-card">
-                <div class="pn-insight-stat">560,545</div>
-                <div class="pn-insight-body">
-                  <strong>A Quarter of the Raw Feed Was Duplicate Noise</strong>
-                  <p>Removed from overlapping weekly government extracts — left unaddressed, this would have inflated every volume metric by roughly 25%.</p>
-                </div>
-              </div>
-              <div class="pn-insight-card">
-                <div class="pn-insight-stat">0.96%</div>
-                <div class="pn-insight-body">
-                  <strong>Suburb-Relative Detection Catches What Flat Thresholds Miss</strong>
-                  <p>11,854 sales flagged as likely non-market transactions by comparing each sale to its own suburb's typical price, not one statewide number.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div class="cs-hero__visual glass-stage" data-reveal="scale">
+          <div class="glass-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+          <figure class="cs-frame" data-tilt="4">
+            <div class="cs-frame__bar"><span></span><span></span><span></span><em>nsw-property-market.pbix</em></div>
+            <div class="cs-zoom shimmer"><img src="assets/screenshots/nswsc1.png" alt="NSW Market Overview &amp; Insights dashboard page" /></div>
+          </figure>
+          <div class="cs-float cs-float--a"><span class="mono">2.2M+</span> records cleaned</div>
+          <div class="cs-float cs-float--b"><span class="mono">608</span> postcodes</div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Recommendations -->
-    <section class="pw-section pw-dark">
-      <div class="pw-container">
-        <span class="pw-label">Recommendations</span>
-        <h2 class="pw-heading pw-heading--white">Actionable Insights</h2>
-        <div class="pw-rec-grid">
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <h3>Benchmark Against Local Context</h3>
-            <p>Compare each transaction to its own suburb's typical price rather than one fixed dollar threshold — $150,000 reads very differently in a regional town versus Parramatta.</p>
+      <!-- In 30 seconds -->
+      <section class="cs-container cs-section" id="overview" data-toc="Overview">
+        <div class="section-head" data-word="OVERVIEW" data-reveal>
+          <span class="section-num">01 — In 30 seconds</span>
+          <h2>The Short Version</h2>
+        </div>
+        <div class="cs-tldr" data-stagger="120">
+          <article class="cs-tldr__card spotlight">
+            <span class="cs-tldr__icon"><i class="fas fa-question"></i></span>
+            <span class="cs-tldr__label">The question</span>
+            <p>How do location, socio-economic profile and property type drive housing prices across NSW?</p>
+          </article>
+          <article class="cs-tldr__card spotlight">
+            <span class="cs-tldr__icon"><i class="fas fa-cogs"></i></span>
+            <span class="cs-tldr__label">What I did</span>
+            <p>Cleaned 2.2M government sale records in Python, enriched them with ABS SEIFA indexes, modelled a MySQL star schema and built a two-page Power BI dashboard.</p>
+          </article>
+          <article class="cs-tldr__card spotlight">
+            <span class="cs-tldr__icon"><i class="fas fa-lightbulb"></i></span>
+            <span class="cs-tldr__label">What I found</span>
+            <p>Price tracks socio-economic advantage (a 2.3× gap), houses outgrew units in the 2021 boom, and regional NSW is outperforming the capital.</p>
+          </article>
+        </div>
+
+        <div class="cs-kpis" data-stagger="90">
+          <div class="cs-kpi">
+            <span class="cs-kpi__num" data-count="2.2" data-decimals="1" data-suffix="M+">2.2M+</span>
+            <span class="cs-kpi__label">Raw Government Sale Records Loaded</span>
           </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-balance-scale"></i></div>
-            <h3>Weight Models by Socio-Economic Profile</h3>
-            <p>Given the near-2.3× price gap across SEIFA deciles, any valuation approach should incorporate a postcode's socio-economic context alongside property features.</p>
+          <div class="cs-kpi">
+            <span class="cs-kpi__num" data-count="608">608</span>
+            <span class="cs-kpi__label">NSW Postcodes Modelled</span>
           </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-mountain"></i></div>
-            <h3>Scout Regional Growth Corridors</h3>
-            <p>Albury-Wagga, Newcastle/Lake Macquarie, the Snowy Mountains and Hunter Valley are already outperforming the capital — a concrete shortlist for further research.</p>
+          <div class="cs-kpi">
+            <span class="cs-kpi__num" data-count="1.2" data-decimals="1" data-suffix="M+">1.2M+</span>
+            <span class="cs-kpi__label">Verified Sales in the Warehouse</span>
           </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-clone"></i></div>
-            <h3>Always Deduplicate Government Feeds</h3>
-            <p>Any pipeline ingesting a continuously-refreshed government source should build deduplication in as a standard early step — it corrected roughly a quarter of this dataset.</p>
-          </div>
-          <div class="pw-rec-card">
-            <div class="pw-rec-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Extend to Price Prediction</h3>
-            <p>The cleaned, enriched, warehoused dataset is already shaped for a time-based train/test split and a regression or gradient-boosted model as a natural next iteration.</p>
+          <div class="cs-kpi">
+            <span class="cs-kpi__num" data-count="4">4</span>
+            <span class="cs-kpi__label">ABS SEIFA Indexes Integrated</span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Dashboard -->
+      <section class="cs-container cs-section" id="dashboard" data-toc="Dashboard">
+        <div class="section-head" data-word="VISUALS" data-reveal>
+          <span class="section-num">02 — Visual Analysis</span>
+          <h2>Dashboard Outputs</h2>
+          <p>Click any screenshot to view it full size.</p>
+        </div>
+        <div class="cs-gallery" data-stagger="120">
+          <figure class="cs-shot">
+            <div class="cs-frame">
+              <div class="cs-frame__bar"><span></span><span></span><span></span><em>Page 1 · Overview</em></div>
+              <div class="cs-zoom shimmer"><img src="assets/screenshots/nswsc1.png" alt="NSW Market Overview &amp; Insights dashboard page" loading="lazy" /></div>
+            </div>
+            <figcaption>
+              <strong>Market Overview &amp; Insights</strong>
+              <span>State-wide KPIs, the 2021 price boom, a postcode-level sales map and a fastest-growing-suburbs leaderboard.</span>
+            </figcaption>
+          </figure>
+          <figure class="cs-shot">
+            <div class="cs-frame">
+              <div class="cs-frame__bar"><span></span><span></span><span></span><em>Page 2 · Suburb Explorer</em></div>
+              <div class="cs-zoom shimmer"><img src="assets/screenshots/nswsc1.png" alt="NSW Suburb Explorer dashboard page" loading="lazy" /></div>
+            </div>
+            <figcaption>
+              <strong>Suburb Explorer</strong>
+              <span>Drill into any suburb and compare it against the state median.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="cs-container cs-section" id="process" data-toc="Process">
+        <div class="section-head" data-word="PROCESS" data-reveal>
+          <span class="section-num">03 — Methodology</span>
+          <h2>How It Was Done</h2>
+          <p>Five steps. Select one to see the detail.</p>
+        </div>
+
+        <div class="cs-steps" data-reveal style="--steps: 5">
+          <div class="cs-steps__track" role="tablist" aria-label="Methodology steps">
+            <span class="cs-steps__line" aria-hidden="true"><span class="cs-steps__fill"></span></span>
+            <button class="cs-step is-active" role="tab" id="st1-tab" aria-controls="st1" aria-selected="true"><span class="cs-step__num">01</span><span class="cs-step__name">Cleaning</span></button>
+            <button class="cs-step" role="tab" id="st2-tab" aria-controls="st2" aria-selected="false"><span class="cs-step__num">02</span><span class="cs-step__name">Enrichment</span></button>
+            <button class="cs-step" role="tab" id="st3-tab" aria-controls="st3" aria-selected="false"><span class="cs-step__num">03</span><span class="cs-step__name">Warehouse</span></button>
+            <button class="cs-step" role="tab" id="st4-tab" aria-controls="st4" aria-selected="false"><span class="cs-step__num">04</span><span class="cs-step__name">SQL</span></button>
+            <button class="cs-step" role="tab" id="st5-tab" aria-controls="st5" aria-selected="false"><span class="cs-step__num">05</span><span class="cs-step__name">Power BI</span></button>
+          </div>
+
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st1" aria-labelledby="st1-tab">
+            <span class="cs-step-panel__num">01</span>
+            <div><h3>Data Sourcing &amp; Cleaning</h3><p>Loaded 2,206,232 raw records and resolved seven real data-quality issues, including 560,545 duplicate rows, mixed price scales, mixed land-area units, and inconsistent property-type labels.</p></div>
+          </div>
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st2" aria-labelledby="st2-tab" hidden>
+            <span class="cs-step-panel__num">02</span>
+            <div><h3>Socio-Economic Enrichment</h3><p>Joined all four ABS SEIFA 2021 indexes onto the cleaned sales data by postcode — a 100% match rate across every NSW postcode.</p></div>
+          </div>
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st3" aria-labelledby="st3-tab" hidden>
+            <span class="cs-step-panel__num">03</span>
+            <div><h3>Relational Warehouse Design</h3><p>Normalised the data into a MySQL star schema: a fact_property_sales table referencing a dim_postcode_seifa dimension table.</p></div>
+          </div>
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st4" aria-labelledby="st4-tab" hidden>
+            <span class="cs-step-panel__num">04</span>
+            <div><h3>Analytical SQL</h3><p>LAG for year-over-year growth, NTILE for price quartiles, and suburb-relative outlier detection.</p></div>
+          </div>
+          <div class="cs-step-panel glass-card" role="tabpanel" id="st5" aria-labelledby="st5-tab" hidden>
+            <span class="cs-step-panel__num">05</span>
+            <div><h3>Interactive Power BI Dashboard</h3><p>Connected Power BI to the MySQL warehouse and built a DAX measure library across a two-page overview and suburb drill-down.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Findings -->
+      <section class="cs-container cs-section" id="findings" data-toc="Findings">
+        <div class="section-head" data-word="INSIGHTS" data-reveal>
+          <span class="section-num">04 — Key Findings</span>
+          <h2>What the Data Revealed</h2>
+        </div>
+        <div class="cs-findings" data-stagger="100">
+          <article class="cs-finding cs-finding--wide spotlight">
+            <span class="cs-finding__stat">+26% <small>vs</small> +13%</span>
+            <h3>Houses Outpaced Units in the 2021 Boom</h3>
+            <p>In the biggest boom year, house prices grew at roughly double the rate of units.</p>
+          </article>
+          <article class="cs-finding spotlight">
+            <span class="cs-finding__stat">2.3×</span>
+            <h3>Price Tracks Socio-Economic Advantage</h3>
+            <p>Median price climbs from $555K in the most disadvantaged SEIFA decile to $1.3M in the most advantaged.</p>
+          </article>
+          <article class="cs-finding spotlight">
+            <span class="cs-finding__stat">Regional</span>
+            <h3>Regional NSW Outperforming the Capital</h3>
+            <p>The fastest-growing suburbs cluster around Albury-Wagga, Newcastle, the Snowy Mountains and Hunter Valley.</p>
+          </article>
+        </div>
+      </section>
+    </main>
 
     <footer id="footer">
       <div class="container">
         <a href="mailto:velurichiranjeevi2001@gmail.com">velurichiranjeevi2001@gmail.com</a>
         <div class="social">
-          <a href="https://www.linkedin.com/in/veluri-chiranjeevi-5b1b20225" target="_blank"><img src="./assets/linkedin-icon.svg" alt="LinkedIn" /></a>
-          <a href="https://github.com/ChiranjeeviVeluri" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
+          <a href="https://www.linkedin.com/in/veluri-chiranjeevi-5b1b20225" target="_blank" rel="noopener"><img src="./assets/linkedin-icon.svg" alt="LinkedIn" /></a>
+          <a href="https://github.com/ChiranjeeviVeluri" target="_blank" rel="noopener"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
         </div>
         <p>Copyright &copy; Chiranjeevi Veluri <span id="datee"></span>, All rights reserved</p>
       </div>
     </footer>
 
+    <script src="js/case-study.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/project-nsw.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/glass.js"></script>
   </body>
 </html>

@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <script src="js/theme-init.js"></script>
     <title>Chiranjeevi Veluri | Data Analyst</title>
     <meta name="description" content="Chiranjeevi Veluri | Data Analyst Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Sora:wght@600;700;800&display=swap" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/cmdk.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/glass.css" />
+    <link rel="stylesheet" href="css/experience.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   </head>
   <body>
     <div class="page-transition"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="bg-fx" aria-hidden="true">
+      <span class="bg-blob bg-blob--1"></span>
+      <span class="bg-blob bg-blob--2"></span>
+      <span class="bg-blob bg-blob--3"></span>
+      <div class="bg-grain"></div>
+    </div>
 
     <header id="hero">
       <nav class="navbar">
         <div class="container">
           <div class="nav-social">
-            <a href="https://www.linkedin.com/in/veluri-chiranjeevi-5b1b20225" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/ChiranjeeviVeluri" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/veluri-chiranjeevi-5b1b20225" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ChiranjeeviVeluri" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a href="mailto:velurichiranjeevi2001@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
           <ul class="nav-menu">
@@ -27,18 +49,24 @@
             <li><a class="nav-link" href="#projects">PROJECTS</a></li>
             <li><a class="nav-link" href="#education">EDUCATION</a></li>
             <li><a class="nav-link" href="#experience">EXPERIENCE</a></li>
+            <li><a class="nav-link" href="#contact">CONTACT</a></li>
             <li>
-              <a class="nav-link btn btn-primary" href="#" target="_blank">RESUME <i class="fas fa-arrow-right"></i></a>
+              <a class="nav-link btn btn-primary" href="assets/resume.pdf" target="_blank" rel="noopener" data-resume>RESUME <i class="fas fa-arrow-right"></i></a>
             </li>
-            <div class="theme-switch">
-              <input type="checkbox" id="switch" />
-              <label class="toggle-icons" for="switch">
-                <img class="moon" src="assets/moon.svg" alt="Dark mode" />
-                <img class="sun" src="assets/sun.svg" alt="Light mode" />
-              </label>
-            </div>
+            <li class="cmdk-li">
+              <button class="cmdk-trigger" type="button" data-cmdk-open aria-label="Open command menu"><i class="fas fa-search"></i><span data-cmdk-key>Ctrl K</span></button>
+            </li>
+            <li class="theme-li">
+              <div class="theme-switch">
+                <input type="checkbox" id="switch" aria-label="Toggle dark mode" checked />
+                <label class="toggle-icons" for="switch">
+                  <img class="moon" src="assets/moon.svg" alt="" />
+                  <img class="sun" src="assets/sun.svg" alt="" />
+                </label>
+              </div>
+            </li>
           </ul>
-          <div class="hamburger">
+          <div class="hamburger" role="button" tabindex="0" aria-label="Menu" aria-expanded="false">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -46,165 +74,296 @@
         </div>
       </nav>
 
-      <section class="header-container">
-        <img class="profile-image" src="assets/profile_jpeg.jpeg" alt="Chiranjeevi Veluri" />
-        <h1>Hi I'm <span class="highlight">Chiranjeevi</span> Veluri</h1>
-        <div class="content-text">
-          <h2 id="typing-line-1"></h2>
-          <h2 id="typing-line-2"></h2>
-          <p>I'm a Master's student in Information Technology at Deakin University.
-             I'm passionate about turning raw data into meaningful insights that drive decisions. Previously worked as an Associate
-             Technical Engineer at Kyndryl, where I managed large-scale IT systems and discovered my 
-             love for data-driven problem solving.</p>
+      <section class="header-container hero">
+        <svg class="hero-chart" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="heroArea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1F64C9" stop-opacity="0.22" />
+              <stop offset="1" stop-color="#1F64C9" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <path class="hero-chart__area" fill="url(#heroArea)" d="M0,330 L100,300 L200,312 L300,250 L400,268 L500,200 L600,220 L700,160 L800,182 L900,120 L1000,138 L1100,80 L1200,62 L1200,400 L0,400 Z" />
+          <path class="hero-chart__line" pathLength="1" d="M0,330 L100,300 L200,312 L300,250 L400,268 L500,200 L600,220 L700,160 L800,182 L900,120 L1000,138 L1100,80 L1200,62" />
+        </svg>
+
+        <div class="hero-grid">
+          <div class="hero-text">
+            <span class="hero-eyebrow hero-in" style="--i: 0"><span class="status-dot"></span> Data Analyst · Melbourne, VIC</span>
+            <h1 class="hero-title">
+              <span class="w"><span style="--i: 1">Hi,</span></span>
+              <span class="w"><span style="--i: 2">I'm</span></span>
+              <span class="w"><span class="highlight" style="--i: 3">Chiranjeevi</span></span>
+              <span class="w"><span style="--i: 4">Veluri</span></span>
+            </h1>
+            <h2 class="hero-typing hero-in" style="--i: 3">
+              Transforming data into
+              <span class="hero-typing__word" id="typing-rotate" data-phrases="business value.|Power BI dashboards.|SQL-driven insights.|decisions that matter.">business value.</span>
+            </h2>
+            <p class="hero-bio hero-in" style="--i: 4">I'm a Master's student in Information Technology at Deakin University.
+               I'm passionate about turning raw data into meaningful insights that drive decisions. Previously worked as an Associate
+               Technical Engineer at Kyndryl, where I managed large-scale IT systems and discovered my
+               love for data-driven problem solving.</p>
+            <div class="hero-cta hero-in" style="--i: 5">
+              <a href="#projects" class="btn btn-primary magnetic">View Projects <i class="fas fa-arrow-right"></i></a>
+              <a href="#contact" class="btn btn-ghost magnetic">Connect With Me</a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="orbit">
+              <div class="orbit__ring"></div>
+              <img class="profile-image" src="assets/profile-640.jpg" alt="Chiranjeevi Veluri" width="640" height="640" />
+              <div class="orbit__track" aria-hidden="true">
+                <span class="orbit__item" style="--a: 0deg"><span><img src="https://img.icons8.com/color/96/power-bi.png" alt="" /></span></span>
+                <span class="orbit__item" style="--a: 72deg"><span><i class="devicon-python-plain colored"></i></span></span>
+                <span class="orbit__item" style="--a: 144deg"><span><img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="" /></span></span>
+                <span class="orbit__item" style="--a: 216deg"><span><i class="devicon-mysql-plain colored"></i></span></span>
+                <span class="orbit__item" style="--a: 288deg"><span><img src="https://img.icons8.com/color/96/tableau-software.png" alt="" /></span></span>
+              </div>
+            </div>
+          </div>
         </div>
-        <a href="#footer" class="btn btn-secondary">Connect With Me</a>
+
+        <a href="#glance" class="scroll-cue" aria-label="Scroll down"><span></span></a>
       </section>
     </header>
 
+    <!-- At a glance -->
+    <section id="glance" class="glance container" aria-label="At a glance">
+      <div class="bento" data-stagger="80">
+        <div class="tile tile--location spotlight">
+          <span class="tile__label"><i class="fas fa-map-marker-alt"></i> Based in</span>
+          <div class="au-map" aria-hidden="true">
+            <span class="au-map__dots"></span>
+            <span class="map-pin" style="left: 77.8%; top: 81.6%"><span class="map-pin__label">Melbourne</span></span>
+          </div>
+          <div>
+            <div class="clock" data-clock="Australia/Melbourne">--:--</div>
+            <p class="tile__text" data-clock-greeting>Melbourne, Victoria</p>
+          </div>
+        </div>
+        <div class="tile spotlight">
+          <span class="tile__label"><i class="fas fa-bullseye"></i> Job postings analysed</span>
+          <span class="tile__num" data-count="30000" data-suffix="+">30,000+</span>
+        </div>
+        <div class="tile spotlight">
+          <span class="tile__label"><i class="fas fa-users"></i> Users supported</span>
+          <span class="tile__num" data-count="1000" data-suffix="+">1,000+</span>
+        </div>
+        <div class="tile spotlight">
+          <span class="tile__label"><i class="fas fa-graduation-cap"></i> Currently</span>
+          <div>
+            <p class="tile__title">Master of IT</p>
+            <p class="tile__text">Deakin University · 2024 – 2026</p>
+          </div>
+        </div>
+        <div class="tile spotlight">
+          <span class="tile__label"><span class="status-dot"></span> Open to</span>
+          <div>
+            <p class="tile__title">Data Analyst roles</p>
+            <p class="tile__text">Let's talk about your data.</p>
+          </div>
+        </div>
+        <div class="tile spotlight">
+          <span class="tile__label"><i class="fas fa-folder-open"></i> Case studies</span>
+          <span class="tile__num" data-count="4">4</span>
+        </div>
+        <div class="tile spotlight">
+          <span class="tile__label"><i class="fas fa-chart-pie"></i> BI solutions delivered</span>
+          <span class="tile__num" data-count="2">2</span>
+        </div>
+        <div class="tile tile--wide spotlight">
+          <span class="tile__label"><i class="fas fa-toolbox"></i> Toolkit focus</span>
+          <div class="chip-row">
+            <span class="chip">Power BI</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Python</span>
+            <span class="chip">Excel</span>
+            <span class="chip">Tableau</span>
+            <span class="chip">DAX</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Skills -->
-    <section id="skills" class="skills-container container fade-up">
+    <section id="skills" class="container">
       <div class="division"></div>
-      <div class="content-text">
+      <div class="section-head" data-word="SKILLS" data-reveal>
+        <span class="section-num">01 — Skills</span>
         <h2>My Skills</h2>
         <p>Tools and technologies I work with</p>
       </div>
-      <div class="skills-grid">
-        <div class="skill-row">
-          <h3 class="category-label">Analytics & BI <br>Tools</h3>
-          <div class="skill-icons">
-            <div class="skill-icon"><img src="https://img.icons8.com/color/96/power-bi.png" alt="Power BI" /><span>Power BI</span></div>
-            <div class="skill-icon"><img src="https://img.icons8.com/color/96/tableau-software.png" alt="Tableau" /><span>Tableau</span></div>
-            <div class="skill-icon"><img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="Excel" /><span>Excel</span></div>
-            <div class="skill-icon"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-            <div class="skill-icon"><i class="devicon-jupyter-plain colored"></i><span>Jupyter</span></div>
-            <div class="skill-icon"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__row">
+          <div class="marquee__track">
+            <span class="marquee__item"><img src="https://img.icons8.com/color/96/power-bi.png" alt="" />Power BI</span>
+            <span class="marquee__item"><img src="https://img.icons8.com/color/96/tableau-software.png" alt="" />Tableau</span>
+            <span class="marquee__item"><img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="" />Excel</span>
+            <span class="marquee__item"><i class="devicon-python-plain colored"></i>Python</span>
+            <span class="marquee__item"><i class="devicon-azuresqldatabase-plain colored"></i>SQL</span>
+            <span class="marquee__item"><i class="devicon-mysql-plain colored"></i>MySQL</span>
+            <span class="marquee__item"><i class="devicon-pandas-plain colored"></i>Pandas</span>
+            <span class="marquee__item"><i class="devicon-numpy-plain colored"></i>NumPy</span>
           </div>
         </div>
-        <div class="skill-row">
-          <h3 class="category-label">Languages</h3>
-          <div class="skill-icons">
-            <div class="skill-icon"><i class="devicon-python-plain colored"></i><span>Python</span></div>
-            <div class="skill-icon"><i class="devicon-azuresqldatabase-plain colored"></i><span>SQL</span></div>
-            <div class="skill-icon"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+        <div class="marquee__row marquee__row--reverse">
+          <div class="marquee__track">
+            <span class="marquee__item"><img src="https://img.icons8.com/color/96/matplotlib.png" alt="" />Matplotlib</span>
+            <span class="marquee__item"><img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="" />Seaborn</span>
+            <span class="marquee__item"><i class="devicon-jupyter-plain colored"></i>Jupyter</span>
+            <span class="marquee__item"><i class="devicon-git-plain colored"></i>Git</span>
+            <span class="marquee__item"><i class="devicon-vscode-plain colored"></i>VS Code</span>
+            <span class="marquee__item"><i class="devicon-trello-plain colored"></i>Trello</span>
+            <span class="marquee__item"><i class="fas fa-columns"></i>Agile &amp; Scrum</span>
+            <span class="marquee__item"><i class="fas fa-users"></i>Stakeholder Management</span>
           </div>
         </div>
-        <div class="skill-row">
-          <h3 class="category-label">Libraries</h3>
-          <div class="skill-icons">
-            <div class="skill-icon"><i class="devicon-pandas-plain colored"></i><span>Pandas</span></div>
-            <div class="skill-icon"><i class="devicon-numpy-plain colored"></i><span>NumPy</span></div>
-            <div class="skill-icon"><img src="https://img.icons8.com/color/96/matplotlib.png" alt="Matplotlib" /><span>Matplotlib</span></div>
-           <div class="skill-icon"><img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="Seaborn" /><span>Seaborn</span></div>
-          </div>
+      </div>
+
+      <div data-reveal>
+        <div class="tablist" role="tablist" aria-label="Skill categories">
+          <span class="tab-indicator" aria-hidden="true"></span>
+          <button class="tab is-active" role="tab" id="sk-bi-tab" aria-controls="sk-bi" aria-selected="true">Analytics &amp; BI</button>
+          <button class="tab" role="tab" id="sk-lang-tab" aria-controls="sk-lang" aria-selected="false">Languages</button>
+          <button class="tab" role="tab" id="sk-lib-tab" aria-controls="sk-lib" aria-selected="false">Libraries</button>
+          <button class="tab" role="tab" id="sk-biz-tab" aria-controls="sk-biz" aria-selected="false">Business</button>
+          <button class="tab" role="tab" id="sk-way-tab" aria-controls="sk-way" aria-selected="false">Ways of Working</button>
         </div>
-        <div class="skill-row">
-          <h3 class="category-label">Business <br>Engagement</h3>
-          <div class="skill-icons">
-            <div class="skill-icon"><i class="fas fa-clipboard-list"></i><span>Requirements Gathering</span></div>
-            <div class="skill-icon"><i class="fas fa-users"></i><span>Stakeholder Management</span></div>
-            <div class="skill-icon"><i class="fas fa-file-alt"></i><span>Documentation</span></div>
-            <div class="skill-icon"><i class="fas fa-sync-alt"></i><span>Process Automation</span></div>
-          </div>
+
+        <div class="skill-panel" role="tabpanel" id="sk-bi" aria-labelledby="sk-bi-tab">
+          <div class="skill-card spotlight"><span class="skill-card__icon"><img src="https://img.icons8.com/color/96/power-bi.png" alt="" /></span><span class="skill-card__name">Power BI</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><img src="https://img.icons8.com/color/96/tableau-software.png" alt="" /></span><span class="skill-card__name">Tableau</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="" /></span><span class="skill-card__name">Excel</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="devicon-git-plain colored"></i></span><span class="skill-card__name">Git</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="devicon-jupyter-plain colored"></i></span><span class="skill-card__name">Jupyter</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="devicon-vscode-plain colored"></i></span><span class="skill-card__name">VS Code</span></div>
         </div>
-        <div class="skill-row">
-          <h3 class="category-label">Ways of <br>Working</h3>
-          <div class="skill-icons">
-            <div class="skill-icon"><i class="fas fa-columns"></i><span>Agile & Scrum</span></div>
-            <div class="skill-icon"><i class="fas fa-calendar-check"></i><span>Sprint Planning</span></div>
-            <div class="skill-icon"><i class="devicon-trello-plain colored"></i><span>Trello</span></div>
-            <div class="skill-icon"><i class="fas fa-project-diagram"></i><span>Risk & Timeline Management</span></div>
-          </div>
+
+        <div class="skill-panel" role="tabpanel" id="sk-lang" aria-labelledby="sk-lang-tab" hidden>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="devicon-python-plain colored"></i></span><span class="skill-card__name">Python</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="devicon-azuresqldatabase-plain colored"></i></span><span class="skill-card__name">SQL</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="devicon-mysql-plain colored"></i></span><span class="skill-card__name">MySQL</span></div>
+        </div>
+
+        <div class="skill-panel" role="tabpanel" id="sk-lib" aria-labelledby="sk-lib-tab" hidden>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="devicon-pandas-plain colored"></i></span><span class="skill-card__name">Pandas</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="devicon-numpy-plain colored"></i></span><span class="skill-card__name">NumPy</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><img src="https://img.icons8.com/color/96/matplotlib.png" alt="" /></span><span class="skill-card__name">Matplotlib</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="" /></span><span class="skill-card__name">Seaborn</span></div>
+        </div>
+
+        <div class="skill-panel" role="tabpanel" id="sk-biz" aria-labelledby="sk-biz-tab" hidden>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="fas fa-clipboard-list"></i></span><span class="skill-card__name">Requirements Gathering</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="fas fa-users"></i></span><span class="skill-card__name">Stakeholder Management</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="fas fa-file-alt"></i></span><span class="skill-card__name">Documentation</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="fas fa-sync-alt"></i></span><span class="skill-card__name">Process Automation</span></div>
+        </div>
+
+        <div class="skill-panel" role="tabpanel" id="sk-way" aria-labelledby="sk-way-tab" hidden>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="fas fa-columns"></i></span><span class="skill-card__name">Agile &amp; Scrum</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="fas fa-calendar-check"></i></span><span class="skill-card__name">Sprint Planning</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="devicon-trello-plain colored"></i></span><span class="skill-card__name">Trello</span></div>
+          <div class="skill-card spotlight"><span class="skill-card__icon"><i class="fas fa-project-diagram"></i></span><span class="skill-card__name">Risk &amp; Timeline Management</span></div>
         </div>
       </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="project-container container fade-up">
+    <section id="projects" class="container">
       <div class="division"></div>
-      <div class="content-text">
+      <div class="section-head" data-word="PROJECTS" data-reveal>
+        <span class="section-num">02 — Projects</span>
         <h2>Projects</h2>
         <p>Check out some of my personal projects</p>
       </div>
-      <article class="project">
+
+      <div class="filters" role="toolbar" aria-label="Filter projects" data-reveal>
+        <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All <span class="filter__count">4</span></button>
+        <button class="filter" type="button" data-filter="powerbi" aria-pressed="false">Power BI <span class="filter__count">2</span></button>
+        <button class="filter" type="button" data-filter="excel" aria-pressed="false">Excel <span class="filter__count">2</span></button>
+        <button class="filter" type="button" data-filter="python" aria-pressed="false">Python <span class="filter__count">1</span></button>
+        <button class="filter" type="button" data-filter="sql" aria-pressed="false">SQL <span class="filter__count">1</span></button>
+      </div>
+
+      <div class="p-grid" data-stagger="120">
         <!-- Project 1 - NSW Property Market Intelligence -->
-        <div class="card project-link-card" data-href="project-nsw.html">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>NSW Property Market Intelligence</h3>
-              <p>Python · MySQL · Power BI · DAX</p>
-            </div>
-            <div class="project-link">
-              <a href="project-nsw.html"><i class="fas fa-globe"></i></a>
-            </div>
+        <a class="p-card p-card--featured spotlight transition-link" href="project-nsw.html" data-tags="powerbi python sql" data-tilt="3">
+          <div class="p-frame">
+            <div class="p-frame__bar"><span></span><span></span><span></span><em>nsw-property-market.pbix</em></div>
+            <div class="p-frame__img shimmer"><img src="assets/project/thumb-nsw.webp" alt="NSW Residential Property Market dashboard cover" width="1000" height="563" loading="lazy" /></div>
           </div>
-        </div>
+          <div class="p-card__body">
+            <span class="p-card__kicker">Featured · Data warehouse + BI</span>
+            <h3>NSW Property Market Intelligence</h3>
+            <p>2.2 million NSW government property sale records cleaned, enriched with ABS SEIFA indexes, modelled into a MySQL star schema and explored in Power BI.</p>
+            <ul class="p-card__tags"><li>Python</li><li>MySQL</li><li>Power BI</li><li>DAX</li></ul>
+            <span class="p-card__cta">View case study <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
         <!-- Project 2 - Woolworths -->
-        <div class="card card-woolies project-link-card" data-href="project-woolies.html">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Woolworths Merchandise</h3>
-              <p>Excel · Correlation Analysis</p>
-            </div>
-            <div class="project-link">
-              <a href="project-woolies.html"><i class="fas fa-globe"></i></a>
-            </div>
+        <a class="p-card spotlight transition-link" href="project-woolies.html" data-tags="excel" data-tilt="5">
+          <div class="p-frame">
+            <div class="p-frame__bar"><span></span><span></span><span></span><em>woolworths-merchandise.xlsx</em></div>
+            <div class="p-frame__img shimmer"><img src="assets/project/thumb-woolies.webp" alt="Woolworths Customer Analytics dashboard cover" width="1000" height="563" loading="lazy" /></div>
           </div>
-        </div>
+          <div class="p-card__body">
+            <span class="p-card__kicker">Retail analytics</span>
+            <h3>Woolworths Merchandise</h3>
+            <p>Uncovering product relationships across 8,902 grocery transactions to guide shelf placement and bundling.</p>
+            <ul class="p-card__tags"><li>Excel</li><li>Correlation Analysis</li></ul>
+            <span class="p-card__cta">View case study <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
         <!-- Project 3 - BIG W -->
-        <div class="card project-link-card" data-href="project-bigw.html">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>BIG W Sales Dashboard</h3>
-              <p>Excel · Pivot Tables · Dashboard Design</p>
-            </div>
-            <div class="project-link">
-              <a href="project-bigw.html"><i class="fas fa-globe"></i></a>
-            </div>
+        <a class="p-card spotlight transition-link" href="project-bigw.html" data-tags="excel" data-tilt="5">
+          <div class="p-frame">
+            <div class="p-frame__bar"><span></span><span></span><span></span><em>bigw-sales-performance.xlsx</em></div>
+            <div class="p-frame__img shimmer"><img src="assets/project/thumb-bigw.webp" alt="BIG W Sales Performance dashboard cover" width="1000" height="563" loading="lazy" /></div>
           </div>
-        </div>
+          <div class="p-card__body">
+            <span class="p-card__kicker">Dashboard design</span>
+            <h3>BIG W Sales Dashboard</h3>
+            <p>An interactive Excel dashboard comparing Store and E-Retail performance across states, categories and time.</p>
+            <ul class="p-card__tags"><li>Excel</li><li>Pivot Tables</li><li>Dashboard Design</li></ul>
+            <span class="p-card__cta">View case study <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
         <!-- Project 4 - Everyday Rewards -->
-        <div class="card project-link-card" data-href="project-edr.html">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Everyday Rewards Dashboard</h3>
-              <p>Power BI · DAX · Loyalty KPI Tracking</p>
-            </div>
-            <div class="project-link">
-              <a href="project-edr.html"><i class="fas fa-globe"></i></a>
-            </div>
+        <a class="p-card spotlight transition-link" href="project-edr.html" data-tags="powerbi" data-tilt="5">
+          <div class="p-frame">
+            <div class="p-frame__bar"><span></span><span></span><span></span><em>everyday-rewards-kpi.pbix</em></div>
+            <div class="p-frame__img shimmer"><img src="assets/project/thumb-edr.webp" alt="Everyday Rewards Loyalty KPI dashboard cover" width="1000" height="563" loading="lazy" /></div>
           </div>
-        </div>
-        <div class="card">
-          <div class="project-info">
-            <div class="project-bio"><h3>Project Five</h3><p>SQL, PostgreSQL</p></div>
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
+          <div class="p-card__body">
+            <span class="p-card__kicker">Loyalty KPIs</span>
+            <h3>Everyday Rewards Dashboard</h3>
+            <p>A Power BI dashboard tracking member engagement, points activity and redemption to support retention strategy.</p>
+            <ul class="p-card__tags"><li>Power BI</li><li>DAX</li><li>KPI Tracking</li></ul>
+            <span class="p-card__cta">View case study <i class="fas fa-arrow-right"></i></span>
           </div>
-        </div>
-        <div class="card">
-          <div class="project-info">
-            <div class="project-bio"><h3>Project Six</h3><p>Power BI, DAX</p></div>
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-      <a href="#" class="btn btn-secondary" target="_blank">See More <i class="fas fa-arrow-right"></i></a>
+        </a>
+      </div>
+
+      <span class="swipe-hint"><i class="fas fa-hand-point-right"></i> Swipe to see more</span>
+      <a href="https://github.com/ChiranjeeviVeluri" class="btn btn-secondary projects-more magnetic" target="_blank" rel="noopener">See More <i class="fas fa-arrow-right"></i></a>
     </section>
 
     <!-- Education -->
-    <section id="education" class="timeline-section container fade-up">
+    <section id="education" class="timeline-section container">
       <div class="division"></div>
-      <div class="content-text">
+      <div class="section-head" data-word="EDUCATION" data-reveal>
+        <span class="section-num">03 — Education</span>
         <h2>Education</h2>
         <p>My academic background</p>
       </div>
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline__progress" aria-hidden="true"></div>
+        <div class="timeline-item" data-reveal="right">
           <div class="timeline-date">2024 – 2026</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -212,7 +371,7 @@
             <p class="timeline-place">Deakin University — Melbourne, VIC</p>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item" data-reveal="right">
           <div class="timeline-date">2019 – 2023</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -224,22 +383,36 @@
     </section>
 
     <!-- Experience -->
-     <section id="experience" class="timeline-section container fade-up">
+    <section id="experience" class="timeline-section container">
       <div class="division"></div>
-      <div class="content-text">
+      <div class="section-head" data-word="EXPERIENCE" data-reveal>
+        <span class="section-num">04 — Experience</span>
         <h2>Experience</h2>
         <p>Professional experience delivering impact through data and technology.</p>
       </div>
 
-      <div class="exp-timeline">
-        <!-- Data Career App -->
-        <div class="exp-entry">
-          <div class="exp-date-col">
-            <div class="exp-date">Jan 2025 – Present</div>
-            <div class="exp-location">Sydney, Australia</div>
-          </div>
-          <div class="exp-dot"></div>
-          <div class="exp-card">
+      <div class="xp" data-reveal>
+        <div class="xp-tabs" role="tablist" aria-label="Work experience" aria-orientation="vertical">
+          <span class="tab-indicator" aria-hidden="true"></span>
+          <button class="xp-tab is-active" role="tab" id="xp-dca-tab" aria-controls="xp-dca" aria-selected="true">
+            <span class="xp-tab__dot"></span>
+            <span class="xp-tab__date">Jan 2025 – Present</span>
+            <span class="xp-tab__role">Data Analyst Intern</span>
+            <span class="xp-tab__co">Data Career App · Sydney</span>
+          </button>
+          <button class="xp-tab" role="tab" id="xp-kyn-tab" aria-controls="xp-kyn" aria-selected="false">
+            <span class="xp-tab__dot"></span>
+            <span class="xp-tab__date">Aug 2023 – Aug 2024</span>
+            <span class="xp-tab__role">Associate Technical Engineer</span>
+            <span class="xp-tab__co">Kyndryl · Bangalore</span>
+          </button>
+        </div>
+
+        <div class="xp-stage glass-stage">
+          <div class="glass-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+          <!-- Data Career App -->
+          <article class="exp-card glass-card" id="xp-dca" role="tabpanel" aria-labelledby="xp-dca-tab">
             <div class="exp-card__top">
               <div>
                 <h3 class="exp-role">Data Analyst Intern</h3>
@@ -252,26 +425,27 @@
             <div class="exp-kpi-grid">
               <div class="exp-kpi">
                 <div class="exp-kpi__icon"><i class="fas fa-bullseye"></i></div>
-                <div><div class="exp-kpi__num">30,000+</div><div class="exp-kpi__label">Job Postings Analysed</div></div>
+                <div><div class="exp-kpi__num" data-count="30000" data-suffix="+">30,000+</div><div class="exp-kpi__label">Job Postings Analysed</div></div>
               </div>
               <div class="exp-kpi">
                 <div class="exp-kpi__icon"><i class="fas fa-chart-pie"></i></div>
-                <div><div class="exp-kpi__num">2</div><div class="exp-kpi__label">End-to-End BI Solutions</div></div>
+                <div><div class="exp-kpi__num" data-count="2">2</div><div class="exp-kpi__label">End-to-End BI Solutions</div></div>
               </div>
               <div class="exp-kpi">
                 <div class="exp-kpi__icon"><i class="fas fa-bolt"></i></div>
-                <div><div class="exp-kpi__num">100%</div><div class="exp-kpi__label">Skill Classification Automated</div></div>
+                <div><div class="exp-kpi__num" data-count="100" data-suffix="%">100%</div><div class="exp-kpi__label">Skill Classification Automated</div></div>
               </div>
             </div>
 
-            <div class="exp-divider"></div>
-            <h4 class="exp-subheading"><i class="fas fa-check-circle"></i> Key Contributions</h4>
-            <ul class="exp-contrib-list">
-              <li><strong>Technology Skills Radar:</strong> Designed and delivered a Technology Skills Radar by combining demand analysis and six-month hiring trends into an Adopt, Trial, Assess and Hold framework.</li>
-              <li><strong>Job Market Insights:</strong> Performed exploratory data analysis on 30,000+ Australian job postings to identify hiring trends, data quality issues and enrichment opportunities.</li>
-              <li><strong>Data Automation:</strong> Automated skill classification and reporting workflows using Excel, Power Query and DAX, replacing manual reporting processes.</li>
-              <li><strong>Business Insights:</strong> Developed a Job Market Temperature framework analysing hiring demand and competition to generate personalised recommendations for job seekers.</li>
-            </ul>
+            <details class="xp-more">
+              <summary><span><i class="fas fa-check-circle"></i> Key Contributions</span><i class="fas fa-chevron-down xp-more__chev"></i></summary>
+              <ul class="exp-contrib-list">
+                <li><strong>Technology Skills Radar:</strong> Designed and delivered a Technology Skills Radar by combining demand analysis and six-month hiring trends into an Adopt, Trial, Assess and Hold framework.</li>
+                <li><strong>Job Market Insights:</strong> Performed exploratory data analysis on 30,000+ Australian job postings to identify hiring trends, data quality issues and enrichment opportunities.</li>
+                <li><strong>Data Automation:</strong> Automated skill classification and reporting workflows using Excel, Power Query and DAX, replacing manual reporting processes.</li>
+                <li><strong>Business Insights:</strong> Developed a Job Market Temperature framework analysing hiring demand and competition to generate personalised recommendations for job seekers.</li>
+              </ul>
+            </details>
 
             <div class="exp-tech-list">
               <span class="exp-tech">Power BI</span>
@@ -283,17 +457,10 @@
               <span class="exp-tech">EDA</span>
               <span class="exp-tech">Agile</span>
             </div>
-          </div>
-        </div>
+          </article>
 
-        <!-- Kyndryl -->
-        <div class="exp-entry">
-          <div class="exp-date-col">
-            <div class="exp-date">Aug 2023 – Aug 2024</div>
-            <div class="exp-location">Bangalore, India</div>
-          </div>
-          <div class="exp-dot"></div>
-          <div class="exp-card">
+          <!-- Kyndryl -->
+          <article class="exp-card glass-card" id="xp-kyn" role="tabpanel" aria-labelledby="xp-kyn-tab" hidden>
             <div class="exp-card__top">
               <div>
                 <h3 class="exp-role">Associate Technical Engineer</h3>
@@ -310,26 +477,27 @@
               </div>
               <div class="exp-kpi">
                 <div class="exp-kpi__icon"><i class="fas fa-users"></i></div>
-                <div><div class="exp-kpi__num">1,000+</div><div class="exp-kpi__label">AD Users Supported</div></div>
+                <div><div class="exp-kpi__num" data-count="1000" data-suffix="+">1,000+</div><div class="exp-kpi__label">AD Users Supported</div></div>
               </div>
               <div class="exp-kpi">
                 <div class="exp-kpi__icon"><i class="fas fa-chart-bar"></i></div>
-                <div><div class="exp-kpi__num">25%</div><div class="exp-kpi__label">M365 Collaboration Boost</div></div>
+                <div><div class="exp-kpi__num" data-count="25" data-suffix="%">25%</div><div class="exp-kpi__label">M365 Collaboration Boost</div></div>
               </div>
               <div class="exp-kpi">
                 <div class="exp-kpi__icon"><i class="fas fa-shield-alt"></i></div>
-                <div><div class="exp-kpi__num">30%</div><div class="exp-kpi__label">Faster Incident Resolution</div></div>
+                <div><div class="exp-kpi__num" data-count="30" data-suffix="%">30%</div><div class="exp-kpi__label">Faster Incident Resolution</div></div>
               </div>
             </div>
 
-            <div class="exp-divider"></div>
-            <h4 class="exp-subheading"><i class="fas fa-check-circle"></i> Key Contributions</h4>
-            <ul class="exp-contrib-list">
-              <li><strong>IT Support:</strong> Delivered Level 1 and Level 2 technical support, managing 80–100+ ServiceNow tickets daily while consistently meeting SLA targets.</li>
-              <li><strong>Identity & Access Management:</strong> Administered Active Directory for over 1,000 users, managing accounts, password resets and group policies.</li>
-              <li><strong>Microsoft 365 Administration:</strong> Managed Outlook, Teams and SharePoint provisioning, improving collaboration efficiency by 25% across business teams.</li>
-              <li><strong>Incident Management:</strong> Supported security incident response using SIEM tools and collaborated across Service Desk, Office 365 and Active Directory teams, saving 10 hours/week on escalations.</li>
-            </ul>
+            <details class="xp-more">
+              <summary><span><i class="fas fa-check-circle"></i> Key Contributions</span><i class="fas fa-chevron-down xp-more__chev"></i></summary>
+              <ul class="exp-contrib-list">
+                <li><strong>IT Support:</strong> Delivered Level 1 and Level 2 technical support, managing 80–100+ ServiceNow tickets daily while consistently meeting SLA targets.</li>
+                <li><strong>Identity &amp; Access Management:</strong> Administered Active Directory for over 1,000 users, managing accounts, password resets and group policies.</li>
+                <li><strong>Microsoft 365 Administration:</strong> Managed Outlook, Teams and SharePoint provisioning, improving collaboration efficiency by 25% across business teams.</li>
+                <li><strong>Incident Management:</strong> Supported security incident response using SIEM tools and collaborated across Service Desk, Office 365 and Active Directory teams, saving 10 hours/week on escalations.</li>
+              </ul>
+            </details>
 
             <div class="exp-tech-list">
               <span class="exp-tech">Active Directory</span>
@@ -341,6 +509,32 @@
               <span class="exp-tech">SharePoint</span>
               <span class="exp-tech">Windows</span>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact container">
+      <div class="division"></div>
+      <div class="glass-stage" data-reveal="scale">
+        <div class="glass-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="contact-card glass-card">
+          <span class="section-num">05 — Contact</span>
+          <span class="open-badge"><span class="status-dot"></span> Open to Data Analyst roles</span>
+          <h2 class="contact-title">Let's turn your data into <span class="highlight">decisions.</span></h2>
+          <p class="contact-sub">Have a role, a project or a dataset that needs a closer look? I'd love to hear about it.</p>
+          <div class="contact-actions">
+            <button class="copy-email magnetic" type="button" data-copy-email aria-label="Copy email address">
+              <span class="copy-email__text">velurichiranjeevi2001@gmail.com</span>
+              <span class="copy-email__icon"><i class="far fa-copy"></i></span>
+            </button>
+            <a href="mailto:velurichiranjeevi2001@gmail.com" class="btn btn-primary magnetic">Say Hello <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/veluri-chiranjeevi-5b1b20225" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/ChiranjeeviVeluri" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Résumé</a>
           </div>
         </div>
       </div>
@@ -348,15 +542,30 @@
 
     <footer id="footer">
       <div class="container">
-        <a href="mailto:velurichiranjeevi2001@gmail.com">velurichiranjeevi2001@gmail.com</a>
-        <div class="social">
-          <a href="https://www.linkedin.com/in/veluri-chiranjeevi-5b1b20225" target="_blank"><img src="./assets/linkedin-icon.svg" alt="LinkedIn" /></a>
-          <a href="https://github.com/ChiranjeeviVeluri" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
-        </div>
         <p>Copyright &copy; Chiranjeevi Veluri <span id="datee"></span>, All rights reserved</p>
+        <span class="footer-hint">Press <kbd data-cmdk-key>Ctrl K</kbd> to explore</span>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/veluri-chiranjeevi-5b1b20225" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/ChiranjeeviVeluri" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:velurichiranjeevi2001@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
       </div>
     </footer>
 
+    <button class="back-to-top" type="button" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <a href="#contact" class="hire-fab"><span class="status-dot"></span> Hire me</a>
+
     <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/glass.js"></script>
+    <script src="js/experience.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/cmdk.js"></script>
+    <script src="js/extras.js"></script>
   </body>
 </html>
